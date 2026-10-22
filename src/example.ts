@@ -34,14 +34,14 @@ export const example = parseDocument({
     {
       id: 'learning',
       title: 'Learning by making',
-      summary: 'An interval preserves both ends of a chapter.',
+      summary: 'The start and end dates use month precision.',
       date: { start: '2022-03', end: '2023-09' },
       attributes: { discipline: 'learning' },
       tags: ['Interval'],
     },
     {
       id: 'building',
-      title: 'Something takes shape',
+      title: 'Build the first prototype',
       summary: 'A shared Work rail unfolds into Design and Engineering.',
       date: { start: '2023-04-12' },
       attributes: { discipline: 'engineering' },
@@ -49,8 +49,8 @@ export const example = parseDocument({
     },
     {
       id: 'now',
-      title: 'The next chapter',
-      summary: 'Some stories are still being written.',
+      title: 'Ongoing design work',
+      summary: 'The end date is unspecified because work is ongoing.',
       date: { start: '2024-06', ongoing: true },
       attributes: { discipline: 'design' },
       tags: ['Ongoing'],

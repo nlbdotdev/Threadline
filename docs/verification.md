@@ -1,3 +1,22 @@
+# Example refinement — October 21, 2026
+
+- `npm run check`: no errors or warnings.
+- `npm test`: eight TypeScript tests and two Python adapter tests pass.
+- `npm run build`: app and component package build successfully.
+- Public Git fixture: 80 Svelte commits, six area rails, seven change types,
+  pinned source revision and upstream MIT license. The UI shows 20 rows initially;
+  filtering to Fix returns 42 commits.
+- Spaceflight starting views: 92 early launches, 43 crewed launches in 1961–1972,
+  724 SpaceX launches, and 424 failed attempts. Switching a starting view resets
+  previous filters. The existing 7,405-launch snapshot is unchanged.
+- Browser: checked source-record dialog, inline launch details, Git change-type
+  filtering, and reloading a direct component-docs URL. No console errors in these flows.
+
+## Earlier verification
+
+The following records describe the original local-only build, before standalone hosting
+and the public Svelte Git example. Their fixture-specific counts are historical.
+
 # v0.1 verification — October 14, 2026
 
 Story: loading the Lab reads local JSON → validates the document → renders Svelte

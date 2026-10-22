@@ -1,9 +1,13 @@
 # Threadline Lab
 
-Threadline is a **faceted narrative timeline**: a chronological story that unfolds
-from one color-blended thread into category rails and nested branches. Threadline
-Lab is its experiment and documentation app. Svelte is the reference
-implementation; React and Vue adapters are on the roadmap.
+Threadline is a Svelte 5 timeline component. Events can appear in a single colored
+line or split into category rails. A JSON format defines events, dates, categories,
+and views; the filtering and date utilities are plain TypeScript.
+
+Try it with [spaceflight launches](https://threadline.nlb.dev) or
+[Svelte's Git history](https://threadline.nlb.dev/?example=git).
+[Component docs and playground](https://threadline.nlb.dev/?page=docs) are included.
+React and Vue adapters are planned.
 
 ## Develop
 

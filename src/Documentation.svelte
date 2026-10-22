@@ -31,11 +31,11 @@
   </aside>
   <div class="docs-content">
     {#if active === 'start'}
-      <p class="eyebrow">First-class Svelte</p>
-      <h1>A thread you can<br />make your own.</h1>
+      <p class="eyebrow">Svelte 5 component</p>
+      <h1>Use Threadline<br />in a Svelte app.</h1>
       <p class="intro">
-        The document holds the story. The component gives it shape. Your application decides what
-        each event looks like.
+        Pass a JSON document to the component. It handles the timeline layout, filters, and category
+        rails. Use snippets to customize event cards.
       </p>
       <h2>Use the local package</h2>
       <p>
@@ -59,12 +59,13 @@
       </p>
     {:else if active === 'model'}
       <p class="eyebrow">Portable JSON · version 1</p>
-      <h1>One story.<br />Many readings.</h1>
+      <h1>The document<br />format.</h1>
       <p class="intro">
-        Events are facts. Dimensions describe them. Views decide which attributes become rails.
+        Each document contains dated events, category definitions, and named views. A view chooses
+        which category to use for its rails.
       </p>
       <pre><code>{model}</code></pre>
-      <h2>Dates stay honest</h2>
+      <h2>Date precision</h2>
       <p>
         Use <code>YYYY</code>, <code>YYYY-MM</code>, or <code>YYYY-MM-DD</code>, or UTC
         <code>YYYY-MM-DDTHH:mm:ssZ</code>. Precision comes from the string itself. Use
@@ -88,7 +89,7 @@
       </p>
     {:else if active === 'api'}
       <p class="eyebrow">Component contract</p>
-      <h1>Small surface.<br />Useful defaults.</h1>
+      <h1>Component API.</h1>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Prop</th><th>Default</th><th>Purpose</th></tr></thead><tbody
@@ -113,7 +114,7 @@
       </p>
     {:else if active === 'play'}
       <p class="eyebrow">Interactive example · fictional studio</p>
-      <h1>Change the data.<br />Watch it unfold.</h1>
+      <h1>JSON playground.</h1>
       <p class="intro">
         Try unified, parent, and leaf views. Edit the JSON below to test your own document; invalid
         input leaves the last working preview in place.
@@ -136,7 +137,7 @@
       {#if error}<p class="error" role="alert">{error}</p>{/if}
     {:else if active === 'performance'}
       <p class="eyebrow">Measured core work / rendering roadmap</p>
-      <h1>Keep the story.<br />Reduce the work.</h1>
+      <h1>Performance.</h1>
       <p class="intro">
         Small histories already render in batches. Larger histories need faster selection and an
         optional renderer that keeps only nearby rows mounted.
@@ -179,14 +180,14 @@
         ></pre>
     {:else}
       <p class="eyebrow">Rendering principles</p>
-      <h1>Readable history.<br />Honest geometry.</h1>
+      <h1>Layout and<br />interaction.</h1>
       <h2>Content-spaced chronology</h2>
       <p>
-        Dates determine order; content determines card height. A five-pixel gap does not represent
-        five days. Date ranges appear as labels, rather than proportional duration bars. A
+        Dates determine order; content determines card height. Gaps between cards do not measure
+        elapsed time. Date ranges appear as labels, rather than proportional duration bars. A
         scaled-time view is on the roadmap.
       </p>
-      <h2>Motion follows the reader</h2>
+      <h2>Animation</h2>
       <p>
         Rails merge and split in place. Keyed rows animate when filtered. The unified gradient is
         measured from actual event markers, and follows expansion and resizing. Reduced-motion

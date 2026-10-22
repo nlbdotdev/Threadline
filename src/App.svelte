@@ -64,7 +64,9 @@
   const viewName = $derived(doc?.views.find((x) => x.id === view)?.label ?? 'Highlights');
   onMount(() => {
     const params = new URLSearchParams(location.search);
-    if (params.get('example') === 'git') page = 'git';
+    const requestedPage = params.get('page');
+    if (requestedPage && ['docs', 'data', 'roadmap'].includes(requestedPage)) page = requestedPage;
+    else if (params.get('example') === 'git') page = 'git';
     view = params.get('view') ?? 'highlights';
     query = params.get('q') ?? '';
     country = params.get('country') ?? '';
@@ -80,8 +82,7 @@
           fetch('/data/spaceflight.json'),
           fetch('/data/provenance.json'),
         ]);
-        if (responses.some((x) => !x.ok))
-          throw new Error('Could not load the local spaceflight snapshot.');
+        if (responses.some((x) => !x.ok)) throw new Error('Could not load the spaceflight data.');
         const data = await Promise.all(responses.map((x) => x.json()));
         doc = parseDocument(data[0]);
         provenance = data[1];
@@ -116,6 +117,7 @@
       to,
       order,
       example: page === 'git' ? 'git' : '',
+      page: ['docs', 'data', 'roadmap'].includes(page) ? page : '',
     }))
       if (value) params.set(key, value);
     history.replaceState(null, '', `${location.pathname}?${params}`);
@@ -131,6 +133,62 @@
     from = '';
     to = '';
     query = '';
+  }
+  function label(event: TimelineEvent, key: string) {
+    const value = event.attributes[key];
+    return (Array.isArray(value) ? value : [value])
+      .map(
+        (id) =>
+          doc?.dimensions
+            .find((dimension) => dimension.id === key)
+            ?.values.find((value) => value.id === id)?.label ?? id,
+      )
+      .join(' / ');
+  }
+  const examples = [
+    {
+      id: 'first',
+      title: 'First satellites',
+      note: '1957–1960 · by country',
+      view: 'countries',
+      from: '1957',
+      to: '1960',
+    },
+    {
+      id: 'crewed',
+      title: 'The Moon race',
+      note: '1961–1972 · crewed launches',
+      view: 'countries',
+      from: '1961',
+      to: '1972',
+      crew: 'crewed',
+    },
+    {
+      id: 'spacex',
+      title: 'SpaceX launches',
+      note: '2006–2026 · by outcome',
+      view: 'outcomes',
+      from: '2006',
+      to: '2026',
+      organization: 'SPX',
+    },
+    {
+      id: 'failures',
+      title: 'Launch failures',
+      note: 'All years · by country',
+      view: 'countries',
+      outcome: 'failure',
+    },
+  ];
+  function explore(example: (typeof examples)[number]) {
+    reset();
+    view = example.view;
+    from = example.from ?? '';
+    to = example.to ?? '';
+    crew = example.crew ?? '';
+    organization = example.organization ?? '';
+    outcome = example.outcome ?? '';
+    order = 'asc';
   }
   function period(year: number) {
     from = String(year);
@@ -165,23 +223,23 @@
       ><span>Threadline<span class="lab"> / Lab</span></span></button
     >
     <nav aria-label="Main navigation">
-      {#each [{ id: 'explorer', label: 'Explorer' }, { id: 'git', label: 'Git history' }, { id: 'docs', label: 'Component' }, { id: 'data', label: 'Data & sources' }, { id: 'roadmap', label: 'Roadmap' }] as tab}<button
+      {#each [{ id: 'explorer', label: 'Spaceflight' }, { id: 'git', label: 'Git history' }, { id: 'docs', label: 'Component' }, { id: 'data', label: 'Data & sources' }, { id: 'roadmap', label: 'Roadmap' }] as tab}<button
           class:active={page === tab.id}
           aria-current={page === tab.id ? 'page' : undefined}
           onclick={() => (page = tab.id)}>{tab.label}</button
         >{/each}
     </nav>
-    <span class="version"><i></i>Experiment {page === 'git' ? '002' : '001'}</span>
+    <a class="version" href="https://github.com/nlbdotdev/Threadline">GitHub ↗</a>
   </header>
   <main>
     {#if page === 'explorer'}
       <section class="hero">
         <div>
-          <p class="eyebrow">A faceted narrative timeline <span> / </span> Spaceflight</p>
-          <h1>Every launch.<br />One unfolding <em>story.</em></h1>
+          <p class="eyebrow">Example 01 <span> / </span> Spaceflight</p>
+          <h1>Spaceflight,<br />launch by launch.</h1>
           <p class="intro">
-            Follow the history of spaceflight as one continuous thread.<br class="desktop" /> Unfold it
-            by crew, country, or organization. See what connects.
+            Browse {doc?.events.length.toLocaleString() ?? '…'} orbital and deep-space launch attempts.
+            Compare countries, launch providers, crew status, and outcomes using the same timeline.
           </p>
           <div class="hero-note">
             <span class="dot"></span>Orbital & deep-space attempts<span>1957 → 2026</span>
@@ -217,9 +275,9 @@
               d="M150 106v48M126 130h48"
               stroke="#afbbaa"
               stroke-width=".7"
-            /><circle cx="150" cy="130" r="3" fill="#476e5e" /><text x="218" y="32">ONE THREAD</text
-            ><text x="7" y="232">MANY PERSPECTIVES</text></svg
-          ><span>FIG. 001 <span>Trajectories of a shared history</span></span>
+            /><circle cx="150" cy="130" r="3" fill="#476e5e" /><text x="218" y="32">CHRONOLOGY</text
+            ><text x="7" y="232">CATEGORY RAILS</text></svg
+          ><span>FIG. 001 <span>Timeline layout study</span></span>
         </div>
       </section>
       <div class="stat-strip">
@@ -232,21 +290,23 @@
           >
         </div>
         <div>
-          <strong>{doc?.dimensions[0].values.length ?? '—'}</strong><span
-            >Organization countries</span
-          >
+          <strong>{doc?.dimensions[0].values.length ?? '—'}</strong><span>Country categories</span>
         </div>
         <div class="stat-caption">
-          One event per launch.<br />Every view reads the same history.
+          GCAT snapshot · {provenance?.sourceUpdates.launch
+            ?.split(' ')
+            .filter(Boolean)
+            .slice(0, 3)
+            .join(' ') ?? 'Loading…'}<br />Orbital and deep-space attempts only.
         </div>
       </div>
       {#if error}<div class="error" role="alert">
           {error}<button onclick={() => location.reload()}>Reload</button>
-        </div>{:else if !doc}<p class="loading">Gathering the threads…</p>{:else}
+        </div>{:else if !doc}<p class="loading">Loading launches…</p>{:else}
         <section class="explorer-heading">
           <div>
-            <p class="eyebrow">The launch collection</p>
-            <h2>Spaceflight, over time<span>.</span></h2>
+            <p class="eyebrow">Explore launches</p>
+            <h2>Launch timeline</h2>
           </div>
           <div class="density">
             <button
@@ -260,9 +320,15 @@
             >
           </div>
         </section>
+        <div class="example-starts" aria-label="Suggested spaceflight views">
+          {#each examples as example (example.id)}<button onclick={() => explore(example)}>
+              <strong>{example.title} <span aria-hidden="true">↗</span></strong>
+              <span>{example.note}</span>
+            </button>{/each}
+        </div>
         <div class="catalog-layout">
           <aside class="filter-sidebar" aria-label="Catalogue filters">
-            <p class="eyebrow">Narrow the lens</p>
+            <p class="eyebrow">Filter launches</p>
             <label
               >Country<select bind:value={country}
                 ><option value="">All countries</option
@@ -356,7 +422,53 @@
               to={to || undefined}
               {density}
               onselect={(event) => (selected = event)}
-            />
+            >
+              {#snippet item(event, state)}
+                <div class="launch-meta">
+                  <time datetime={event.date.start ?? undefined}>{formatDate(event)}</time>
+                  {#if event.featured}<span>Milestone</span>{/if}
+                  <span class="launch-outcome" class:failed={event.attributes.outcome === 'failure'}
+                    >{label(event, 'outcome')}</span
+                  >
+                </div>
+                <h3 class="launch-title">
+                  <button onclick={() => (selected = event)}>{event.title}</button>
+                </h3>
+                <p class="launch-summary">{event.summary}</p>
+                <p class="launch-labels">
+                  {label(event, 'country')} · {label(event, 'organization')} · {label(
+                    event,
+                    'crew',
+                  )}
+                </p>
+                <button class="launch-details" aria-expanded={state.expanded} onclick={state.toggle}
+                  >{state.expanded ? 'Hide details −' : 'Show details +'}</button
+                >
+                {#if state.expanded}<div class="launch-detail">
+                    <dl>
+                      <div>
+                        <dt>Vehicle</dt>
+                        <dd>{event.attributes.vehicle}</dd>
+                      </div>
+                      <div>
+                        <dt>Launch site</dt>
+                        <dd>{event.attributes.site} · {event.attributes.pad}</dd>
+                      </div>
+                      <div>
+                        <dt>Launch ID</dt>
+                        <dd>{event.id}</dd>
+                      </div>
+                      <div>
+                        <dt>Source date</dt>
+                        <dd>{event.attributes.sourceDate}</dd>
+                      </div>
+                    </dl>
+                    <button class="launch-details" onclick={() => (selected = event)}
+                      >Full source record ↗</button
+                    >
+                  </div>{/if}
+              {/snippet}
+            </Threadline>
             <p class="reading-note">
               {viewName} · Chronological, content-spaced layout. Gaps do not measure elapsed time.
             </p>
@@ -367,11 +479,11 @@
     {:else if page === 'docs'}<Documentation />
     {:else if page === 'data'}
       <section class="prose-page">
-        <p class="eyebrow">Inspect the evidence</p>
-        <h1>History with<br />a paper trail.</h1>
+        <p class="eyebrow">Sources & methods</p>
+        <h1>Spaceflight data<br />and sources.</h1>
         <p class="intro">
-          A local, attributed snapshot of Jonathan McDowell's launch catalogue. The explorer works
-          without a live API.
+          A fixed snapshot of Jonathan McDowell's launch catalogue. The explorer works without a
+          live API.
         </p>
         <div class="downloads">
           <a class="solid" href="/data/spaceflight.json" download>Download Threadline document ↓</a
@@ -427,7 +539,7 @@
           >. Normalization, highlighted titles, classification, and view definitions are changes
           made for Threadline Lab. Source hashes and retrieval time are available in the manifest.
         </p>
-        <h2>Refresh deliberately</h2>
+        <h2>Update the snapshot</h2>
         <pre><code
             >npm run data:import
 npm run check
@@ -438,14 +550,14 @@ npm run build</code
       </section>
     {:else}
       <section class="prose-page">
-        <p class="eyebrow">A reusable visual system</p>
-        <h1>Start with Svelte.<br /><em>Keep the story portable.</em></h1>
+        <p class="eyebrow">Development status</p>
+        <h1>What works.<br />What comes next.</h1>
         <p class="intro">
-          Threadline is a faceted narrative timeline. Threadline Lab is where we test its grammar
-          against real histories.
+          The Svelte component and JSON format work today. These are the remaining improvements and
+          planned adapters.
         </p>
         <div class="roadmap-grid">
-          {#each [{ no: '01', status: 'Available · v0.1', title: 'Svelte & documentation', body: 'A packaged Svelte 5 renderer, framework-neutral TypeScript core, versioned JSON model, live playground, and launch-history experiment.' }, { no: '02', status: 'Next', title: 'Refine the grammar', body: 'More precise organization mapping, media adapters, URL integrations, controlled detail state, archive scroll reveal, stable focus behavior, and package consumer testing.' }, { no: '03', status: 'Planned', title: 'React & Vue', body: 'Native React and Vue renderers using the same schema, selectors, and behavioral contract. Svelte remains the reference implementation; framework adapters get shared conformance fixtures.' }, { no: '04', status: 'Planned', title: 'More ways to read time', body: 'Proportional time, intervals, BCE dates, uncertainty ranges, dense-data virtualization, and explicit relationship markers.' }, { no: '05', status: 'Future experiments', title: 'Beyond spaceflight', body: 'Mathematical discoveries for uncertain dates and contested attribution. American history for overlapping themes. Scientific discoveries for independent and simultaneous work.' }] as entry}<article
+          {#each [{ no: '01', status: 'Available · v0.1', title: 'Svelte & documentation', body: 'A packaged Svelte 5 renderer, framework-neutral TypeScript core, versioned JSON model, live playground, and launch-history experiment.' }, { no: '02', status: 'Next', title: 'Component improvements', body: 'More precise organization mapping, media adapters, URL integrations, controlled detail state, archive scroll reveal, stable focus behavior, and package consumer testing.' }, { no: '03', status: 'Planned', title: 'React & Vue', body: 'Native React and Vue renderers using the same schema, selectors, and behavioral contract. Svelte remains the reference implementation; framework adapters get shared conformance fixtures.' }, { no: '04', status: 'Planned', title: 'Date and rendering support', body: 'Proportional time, intervals, BCE dates, uncertainty ranges, dense-data virtualization, and explicit relationship markers.' }, { no: '05', status: 'Future experiments', title: 'Beyond spaceflight', body: 'Mathematical discoveries for uncertain dates and contested attribution. American history for overlapping themes. Scientific discoveries for independent and simultaneous work.' }] as entry}<article
             >
               <span class="eyebrow">{entry.no} / {entry.status}</span>
               <h2>{entry.title}</h2>

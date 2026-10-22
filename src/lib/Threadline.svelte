@@ -215,7 +215,7 @@
                 class="details-toggle"
                 aria-expanded={!!expanded[event.id]}
                 onclick={() => toggle(event.id)}
-                >{expanded[event.id] ? 'Close' : 'Explore'} details
+                >{expanded[event.id] ? 'Hide' : 'Show'} details
                 <span aria-hidden="true">{expanded[event.id] ? '−' : '+'}</span></button
               >
               {#if expanded[event.id]}<div class="details" transition:fold>
@@ -261,7 +261,7 @@
         <p>{filtered[visible.length].summary}</p>
       </div>
       <button onclick={() => (limit += pageSize)}
-        >Continue the thread <span aria-hidden="true">↓</span></button
+        >Show more events <span aria-hidden="true">↓</span></button
       >
       <p>
         {(filtered.length - visible.length).toLocaleString()} more events · next {Math.min(
@@ -272,7 +272,7 @@
     </div>
   {:else if visible.length}<div class="end">
       <span>↓</span>
-      <p>{order === 'asc' ? 'The story continues.' : 'Every story begins somewhere.'}</p>
+      <p>All {filtered.length.toLocaleString()} matching events shown.</p>
     </div>{/if}
 </section>
 

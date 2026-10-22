@@ -1,7 +1,7 @@
 # Concept and provenance
 
-Threadline: a **faceted narrative timeline**. One chronological reading can unfold
-into multiple related category rails; a unified thread blends through event colors.
+Threadline displays dated events in one colored line or several category rails.
+The single-line view blends the colors of adjacent events.
 Rails express categories and shared chronology, not causation or dependency.
 
 Design reference: Nathan Bennett's portfolio, inspected on local dev at commit

@@ -14,7 +14,7 @@ ever fired; suborbital, sounding and military rocket scopes are planned separate
 
 Original Launch_Tag, Launch_Date, LaunchCode, vehicle, pad and site remain in
 attributes. Early launch IDs use GCAT's historical Greek designations, not fabricated
-modern COSPAR numbers. Partial/approximate date strings are normalized honestly.
+modern COSPAR numbers. Partial and approximate date strings retain their original precision.
 The importer fails if a selected milestone ID is absent.
 
 ## Country and organization
@@ -61,3 +61,16 @@ python3 scripts/import_gcat.py --source-dir /path/to/tsvs
 Filenames: threadline-launch.tsv, threadline-orgs.tsv, threadline-sites.tsv,
 threadline-missions.tsv. Hashes and retrieval time are refreshed in the manifest.
 Normal build/test commands never refresh or access the upstream catalogue.
+
+## Demo starting views
+
+The four starting views reuse the full snapshot with ordinary filters: first
+satellites (1957–1960), crewed Moon-race-era launches (1961–1972), SpaceX launch
+services (GCAT operator code SPX, 2006–2026), and failed launch attempts.
+The Moon-race view includes all crewed orbital launches in those years, including
+flights that were not lunar missions. It does not classify mission destinations.
+Each button resets previous filters and selects a view over all matching attempts,
+rather than limiting the result to highlighted milestones.
+
+Cards show launch outcome and crew classification without opening the source record.
+The snapshot date appears above the explorer; it is not a live launch feed.

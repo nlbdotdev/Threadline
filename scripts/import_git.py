@@ -93,7 +93,7 @@ def build_document(repo, ref='HEAD', limit=12, url=None):
                  'filesChanged': str(len(paths)), 'additions': str(added), 'deletions': str(removed),
                  'binaryFiles': str(binary), 'pathPreview': paths[:8], 'repository': repo_name}
         events.append({'id': full, 'title': subject, 'date': {'start': stamp},
-                       'summary': f'{len(paths)} files changed · +{added:,} / −{removed:,}' + (f' · {binary} binary files' if binary else ''),
+                       'summary': f'{len(paths)} {"file" if len(paths) == 1 else "files"} changed · +{added:,} / −{removed:,}' + (f' · {binary} binary files' if binary else ''),
                        'attributes': attrs, 'tags': [leaves[key][0] for key in areas],
                        'sources': [{'label': 'View commit', 'url': f'{url.rstrip("/")}/commit/{full}'}] if url else []})
     group_order = sorted(groups, key=lambda group: -sum(counts[key] for key, (_, parent) in leaves.items() if parent == group))

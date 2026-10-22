@@ -332,7 +332,7 @@
       "date": {
         "start": "2026-10-21T21:45:39Z"
       },
-      "summary": "1 files changed \u00b7 +4 / \u22120",
+      "summary": "1 file changed \u00b7 +4 / \u22120",
       "attributes": {
         "area": [
           "area:docs"
@@ -369,7 +369,7 @@
       "date": {
         "start": "2026-10-21T20:31:57Z"
       },
-      "summary": "1 files changed \u00b7 +13 / \u221231",
+      "summary": "1 file changed \u00b7 +13 / \u221231",
       "attributes": {
         "area": [
           "area:runtime/client"
@@ -446,7 +446,7 @@
       "date": {
         "start": "2026-10-21T18:40:00Z"
       },
-      "summary": "1 files changed \u00b7 +14 / \u221213",
+      "summary": "1 file changed \u00b7 +14 / \u221213",
       "attributes": {
         "area": [
           "area:runtime/client"
@@ -791,7 +791,7 @@
       "date": {
         "start": "2026-10-14T23:46:56Z"
       },
-      "summary": "1 files changed \u00b7 +4 / \u22124",
+      "summary": "1 file changed \u00b7 +4 / \u22124",
       "attributes": {
         "area": [
           "area:tests/signals"
@@ -998,7 +998,7 @@
       "date": {
         "start": "2026-10-13T00:38:31Z"
       },
-      "summary": "1 files changed \u00b7 +17 / \u221217",
+      "summary": "1 file changed \u00b7 +17 / \u221217",
       "attributes": {
         "area": [
           "area:runtime/client"
@@ -1511,7 +1511,7 @@
       "date": {
         "start": "2026-10-06T09:18:21Z"
       },
-      "summary": "1 files changed \u00b7 +2 / \u22120",
+      "summary": "1 file changed \u00b7 +2 / \u22120",
       "attributes": {
         "area": [
           "area:docs"
@@ -1594,7 +1594,7 @@
       "date": {
         "start": "2026-10-06T08:34:26Z"
       },
-      "summary": "1 files changed \u00b7 +1 / \u22121",
+      "summary": "1 file changed \u00b7 +1 / \u22121",
       "attributes": {
         "area": [
           "area:docs"
@@ -1672,7 +1672,7 @@
       "date": {
         "start": "2026-10-03T11:35:20Z"
       },
-      "summary": "1 files changed \u00b7 +4 / \u22120",
+      "summary": "1 file changed \u00b7 +4 / \u22120",
       "attributes": {
         "area": [
           "area:docs"
@@ -1709,7 +1709,7 @@
       "date": {
         "start": "2026-10-03T10:36:21Z"
       },
-      "summary": "1 files changed \u00b7 +1 / \u22121",
+      "summary": "1 file changed \u00b7 +1 / \u22121",
       "attributes": {
         "area": [
           "area:docs"

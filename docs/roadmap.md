@@ -22,8 +22,7 @@ agency enrichment, and an automated package-consumer fixture.
 Native @nlb/threadline-react and @nlb/threadline-vue renderers consuming the same
 document version and TypeScript core. No iframe or Svelte-wrapper dependency.
 Share date, filtering, hierarchy, rail assignment and accessible behavior fixtures.
-Use equivalent render props/slots for event cards. Keep Svelte and documentation
-first-class as other renderers are introduced. No adapter packages exist yet.
+Use equivalent render props/slots for event cards. Maintain Svelte support and documentation as other renderers are introduced. No adapter packages exist yet.
 
 ## Planned: richer chronology
 
