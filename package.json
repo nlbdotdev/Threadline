@@ -1,0 +1,65 @@
+{
+  "name": "@nlb/threadline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4315 --strictPort",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "node --import tsx --test tests/*.test.ts && python3 tests/git_import_test.py",
+    "build": "vite build && npm run package",
+    "package": "svelte-package -i src/lib -o package",
+    "schema": "node --import tsx scripts/schema.ts",
+    "data:import": "python3 scripts/import_gcat.py",
+    "preview": "vite preview --host 127.0.0.1 --port 4315 --strictPort",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "data:git": "python3 scripts/import_git.py",
+    "benchmark": "node --import tsx scripts/benchmark.ts"
+  },
+  "exports": {
+    ".": {
+      "types": "./package/index.d.ts",
+      "svelte": "./package/index.js",
+      "default": "./package/index.js"
+    },
+    "./core": {
+      "types": "./package/core.d.ts",
+      "default": "./package/core.js"
+    },
+    "./schema": {
+      "types": "./package/schema.d.ts",
+      "default": "./package/schema.js"
+    },
+    "./schema.json": "./public/threadline.schema.json"
+  },
+  "files": [
+    "package",
+    "public/threadline.schema.json",
+    "docs",
+    "README.md",
+    "NOTICE.md"
+  ],
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "dependencies": {
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@sveltejs/package": "2.5.7",
+    "@sveltejs/vite-plugin-svelte": "7.3.0",
+    "@types/node": "^26.5.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-svelte": "^4.1.1",
+    "svelte": "5.57.0",
+    "svelte-check": "4.7.6",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "vite": "8.2.2"
+  }
+}

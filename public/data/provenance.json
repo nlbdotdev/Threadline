@@ -1,0 +1,27 @@
+{
+  "retrievedAt": "2026-10-14T06:34:19.601354+00:00",
+  "eventCount": 7405,
+  "highlightCount": 24,
+  "matchedHumanFlights": 363,
+  "crewCoverageThrough": "2026-10-08",
+  "sourceUpdates": {
+    "launch": "2026 Oct 13 2144:41",
+    "orgs": "2026 Oct 13 2144:15",
+    "sites": "2026 Oct 13 2144:15",
+    "missions": "2026 Oct  8 1823:50"
+  },
+  "sourceHashes": {
+    "launch": "c8297a5fda1fd296059b7d9102cc7977a81b28dbca854511ec1cc3b63c42f358",
+    "orgs": "a835aaf8d0e5e2505b08377669e5f073fb3ebd3c65a982c2cad4643504da77b1",
+    "sites": "e039e2f2eb22784f384aced81b42b315907c7a000d4bf1a128e3857c80415033",
+    "missions": "251ce781c67fcbdafe5051c419b0edb0c3c42a48f111abec9f6ea5d79db96ff4"
+  },
+  "sourceUrls": {
+    "launch": "https://planet4589.org/space/gcat/tsv/launch/launch.tsv",
+    "orgs": "https://planet4589.org/space/gcat/tsv/tables/orgs.tsv",
+    "sites": "https://planet4589.org/space/gcat/tsv/tables/sites.tsv",
+    "missions": "https://planet4589.org/space/astro/tsv/missions.tsv"
+  },
+  "license": "GCAT: CC-BY-4.0",
+  "attribution": "Data from GCAT (J. McDowell, planet4589.org/space/gcat). Human-flight classification joined to J. McDowell\u2019s human-spaceflight mission list."
+}

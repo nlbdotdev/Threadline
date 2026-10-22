@@ -1,0 +1,10 @@
+node_modules/
+dist/
+package/
+output/
+.svelte-kit/
+.vercel/
+.env*
+!.env.example
+.DS_Store
+__pycache__/

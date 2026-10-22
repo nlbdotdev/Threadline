@@ -1,0 +1,9 @@
+public/data/
+public/threadline.schema.json
+package/
+dist/
+output/
+node_modules/
+package-lock.json
+
+.svelte-kit/
