@@ -43,7 +43,10 @@
         Install the resulting tarball into a Svelte 5 app:
       </p>
       <pre><code>{install}</code></pre>
-      <p>The package is a local experiment. It has not been published to npm.</p>
+      <p>
+        The component is MIT licensed. It has not been published to npm; install the local tarball
+        to use it.
+      </p>
       <h2>Render a document</h2>
       <pre><code>{usage}</code></pre>
       <p>

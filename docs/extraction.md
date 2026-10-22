@@ -6,4 +6,4 @@ Only Threadline source, documentation, tests and attributed spaceflight data are
 The initial Git demo used this public repository. It now uses an attributed
 snapshot of sveltejs/svelte; private Sandbox history is excluded.
 
-Source remains © 2026 Nathan Bennett, all rights reserved. See NOTICE.md.
+Threadline source is © 2026 Nathan Bennett and MIT licensed. See LICENSE and NOTICE.md.

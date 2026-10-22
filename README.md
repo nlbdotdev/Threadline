@@ -49,7 +49,7 @@ npm install /tmp/nlb-threadline-0.1.0.tgz
 <Threadline {document} bind:view pageSize={40} />
 ```
 
-The package is private and unpublished. Packaged files include component/core
+The MIT-licensed package is not yet published to npm. Packaged files include component/core
 JavaScript, TypeScript declarations, a JSON Schema, and documentation. The Lab's
 large spaceflight dataset and application are excluded from the component package.
 
@@ -109,4 +109,10 @@ npm run schema
 ```
 
 Build/package output, raw downloads, screenshots and dependency directories are
-ignored. Source code is not licensed for public redistribution yet; see NOTICE.md.
+ignored.
+
+## License
+
+Threadline code and documentation are [MIT licensed](LICENSE).
+The spaceflight dataset retains its CC BY 4.0 license, and the Svelte Git example
+retains its upstream MIT attribution. See [NOTICE.md](NOTICE.md) for source credits.

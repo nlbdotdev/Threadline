@@ -572,7 +572,8 @@ npm run build</code
     {/if}
   </main>
   <footer>
-    <span>Threadline / Lab <span>© 2026 Nathan Bennett</span></span><a
+    <span>Threadline / Lab <span>© 2026 Nathan Bennett</span></span>
+    <a href="https://github.com/nlbdotdev/Threadline/blob/main/LICENSE">MIT license</a><a
       href="https://planet4589.org/space/gcat/"
       target="_blank"
       rel="noreferrer">Data from GCAT · J. McDowell ↗</a

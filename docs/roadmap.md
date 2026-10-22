@@ -41,4 +41,4 @@ Preserve a clear distinction between narrative spacing and a quantitative time s
 3. American history: overlapping themes and multi-perspective accounts.
 4. Scientific discoveries: evidence sources, revisions and independent work.
 
-Package publication, a public license and hosted deployment are separate decisions.
+Threadline is MIT licensed and the demo is hosted. npm publication remains a separate decision.

@@ -1,8 +1,9 @@
 # Rights and attribution
 
-Threadline implementation and documentation: © 2026 Nathan Bennett. All rights
-reserved. The source is publicly viewable; no redistribution license has been selected.
-The npm package remains private and unpublished; local packaging is supported for development.
+Threadline implementation and documentation: © 2026 Nathan Bennett,
+licensed under the [MIT License](LICENSE). You may use, modify and redistribute
+Threadline, including in commercial projects, under those terms.
+The npm package remains unpublished; local packaging is supported.
 
 Spaceflight source data: © 2020–2026 Jonathan McDowell. GCAT is licensed under
 [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
