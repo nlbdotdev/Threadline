@@ -9,7 +9,7 @@
   let area = $state('');
   const filters = $derived({ area });
   const roots = $derived(doc?.dimensions[0].values.filter((value) => !value.parent) ?? []);
-  const repository = $derived(doc?.events[0]?.attributes.repository ?? 'Threadline');
+  const repository = $derived(doc?.events[0]?.attributes.repository ?? 'svelte');
   const owner = $derived(
     doc?.events[0]?.sources[0]
       ? new URL(doc.events[0].sources[0].url).pathname.split('/')[1]
@@ -31,15 +31,13 @@
 </script>
 
 <section class="git-example">
-  <p class="eyebrow">Experiment 002 / Real Git history</p>
+  <p class="eyebrow">Example 02 / Public Git history</p>
   <div class="heading">
     <div>
-      <h1>
-        A repository.<br />{doc?.events.length === 12 ? 'A dozen' : 'A few'} <em>chapters.</em>
-      </h1>
+      <h1>Svelte, commit<br />by commit.</h1>
       <p class="intro">
-        A tight slice of {repository}, read through the projects it touches.<br />Collapse the work
-        into one thread, then unfold it into areas or projects.
+        80 commits from the Svelte repository. Follow compiler fixes, runtime changes, tests, and
+        documentation, or group them by change type.
       </p>
     </div>
     <div class="repo-stamp">
@@ -49,10 +47,12 @@
     </div>
   </div>
   {#if error}<p class="error" role="alert">{error}</p>{:else if !doc}<p class="loading">
-      Reading the commit collection…
+      Loading commits…
     </p>{:else}
     <div class="context">
       <p>{doc.description}</p>
+      <a href="https://github.com/sveltejs/svelte" target="_blank" rel="noreferrer">Source repo ↗</a
+      >
       <a href="/data/git-history.json" download>Document ↓</a><a
         href="/data/git-provenance.json"
         download>Provenance ↗</a
@@ -66,7 +66,7 @@
             >{/each}</select
         ></label
       >
-      <p>A commit can touch several areas. This filter matches all of them.</p>
+      <p>Includes commits touching the selected area, even when shown on another rail.</p>
     </div>
     <div class="git-timeline">
       <Threadline
@@ -75,7 +75,7 @@
         bind:query
         bind:order
         {filters}
-        pageSize={12}
+        pageSize={20}
         maxRails={7}
         density="compact"
       >
@@ -127,9 +127,9 @@
       </Threadline>
     </div>
     <p class="reading-note">
-      Rails show touched areas, not branches or ancestry. Multi-area commits appear once on their
-      primary area; tags preserve the rest. Display order uses committer time, which can differ from
-      Git topology.
+      Rails group changed files. Each commit appears once; its tags list the other areas it touches.
+      Dates use UTC committer time. This is a timeline, not a branch graph. Svelte metadata is from
+      the public repository; <a href="/data/svelte-LICENSE.txt">MIT license</a>.
     </p>
     <div class="git-recipe">
       <h2>Use another repository</h2>

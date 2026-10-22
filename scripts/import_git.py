@@ -9,6 +9,7 @@ import datetime as dt
 import json
 from pathlib import Path
 import subprocess
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTE = ['#476e5e', '#b97345', '#6486a5', '#9a6e89', '#c39a42', '#627a7d']
@@ -22,16 +23,38 @@ def area(path):
         return f'{root}/{parts[2]}', parts[2].replace('-', ' ').title(), root, CATEGORIES.get(root, root)
     if len(parts) >= 3 and parts[0] == 'utilities':
         return f'utilities/{parts[1]}', parts[1].replace('-', ' ').title(), 'utilities', 'Utilities'
+    if path.startswith('packages/svelte/src/compiler/'):
+        section = parts[4] if parts[4] != 'phases' else parts[5]
+        label = section.split('-', 1)[-1].replace('-', ' ').title()
+        return f'compiler/{section}', label, 'compiler', 'Compiler'
+    if path.startswith('packages/svelte/src/internal/'):
+        section = parts[4] if len(parts) > 4 else 'shared'
+        return f'runtime/{section}', section.title(), 'runtime', 'Runtime'
+    if path.startswith('packages/svelte/src/'):
+        section = parts[3]
+        return f'runtime/{section}', section.replace('-', ' ').title(), 'runtime', 'Runtime'
+    if path.startswith('packages/svelte/tests/'):
+        section = parts[3]
+        return f'tests/{section}', section.replace('-', ' ').title(), 'tests', 'Tests'
+    if parts[0] in ('documentation', 'docs') or path.endswith('.md') and parts[0] not in ('.changeset', '.github') and not path.endswith('CHANGELOG.md'):
+        return 'docs', 'Documentation', 'docs', 'Docs'
+    if parts[0] == '.changeset' or path.endswith(('CHANGELOG.md', 'package.json', 'src/version.js')):
+        return 'releases', 'Versioning & release notes', 'releases', 'Releases'
     if parts[0] == 'showcase':
         return 'catalog', 'Showcase', 'repository', 'Repository'
-    return 'maintenance', 'Repository maintenance', 'repository', 'Repository'
+    return 'maintenance', 'Build & repository', 'tooling', 'Tooling'
+
+def change_kind(subject):
+    if subject.startswith('Version Packages'): return 'release'
+    prefix = subject.split(':', 1)[0].split('(', 1)[0].rstrip('!').lower()
+    return prefix if prefix in ('fix', 'feat', 'docs', 'test', 'chore') else 'other'
 
 def build_document(repo, ref='HEAD', limit=12, url=None):
     def git(*args):
         return subprocess.check_output(['git', '-C', str(repo), *args], text=True)
     head = git('rev-parse', '--verify', '--end-of-options', f'{ref}^{{commit}}').strip()
     shas = git('rev-list', '--first-parent', f'--max-count={limit}', head).splitlines()
-    repo_name = repo.name
+    repo_name = urlparse(url).path.rstrip('/').split('/')[-1].removesuffix('.git') if url else repo.name
     events = []
     leaves = {}
     groups = {}
@@ -61,11 +84,12 @@ def build_document(repo, ref='HEAD', limit=12, url=None):
             groups['group:repository'] = 'Repository'
             touched['area:maintenance'] = 1
         # Prefer actual project work to cross-cutting catalog bookkeeping.
-        areas = sorted(touched, key=lambda key: (key in ('area:maintenance', 'area:catalog'), -touched[key], key))
+        priority = {'group:compiler': 0, 'group:runtime': 0, 'group:docs': 1, 'group:tests': 2, 'group:releases': 3, 'group:tooling': 4}
+        areas = sorted(touched, key=lambda key: (priority.get(leaves[key][1], 0), key in ('area:maintenance', 'area:catalog'), -touched[key], key))
         counts.update(touched)
         stamp = dt.datetime.fromisoformat(original_time).astimezone(dt.timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
         attrs = {'area': areas, 'change': 'merge' if len(parents) > 1 else 'commit',
-                 'sha': full, 'parents': parents, 'sourceCommitterTime': original_time,
+                 'kind': change_kind(subject), 'sha': full, 'parents': parents, 'sourceCommitterTime': original_time,
                  'filesChanged': str(len(paths)), 'additions': str(added), 'deletions': str(removed),
                  'binaryFiles': str(binary), 'pathPreview': paths[:8], 'repository': repo_name}
         events.append({'id': full, 'title': subject, 'date': {'start': stamp},
@@ -78,15 +102,16 @@ def build_document(repo, ref='HEAD', limit=12, url=None):
     values += [{'id': key, 'label': label, 'parent': parent, 'color': colors[parent]} for key, (label, parent) in sorted(leaves.items(), key=lambda item: -counts[item[0]])]
     document = {'version': 1, 'id': 'git-history', 'title': f'{repo_name} commit history',
                 'description': f'{len(events)} commits on the first-parent path ending at {head[:8]}. Ordered by committer timestamp, with merge diffs against the first parent.',
-                'dimensions': [{'id': 'area', 'label': 'Touched area', 'values': values},
+                'dimensions': [{'id': 'area', 'label': 'Changed area', 'values': values},
+                               {'id': 'kind', 'label': 'Change type', 'values': [{'id': key, 'label': label, 'color': color} for key, label, color in [('fix', 'Fix', '#476e5e'), ('feat', 'Feature', '#6486a5'), ('docs', 'Docs', '#9a6e89'), ('test', 'Test', '#c39a42'), ('chore', 'Maintenance', '#627a7d'), ('release', 'Release', '#b97345'), ('other', 'Other', '#887e70')]]},
                                {'id': 'change', 'label': 'Commit type', 'values': [{'id': 'commit', 'label': 'Commit', 'color': '#476e5e'}, {'id': 'merge', 'label': 'Merge', 'color': '#b97345'}]}],
-                'views': [{'id': 'thread', 'label': 'One thread', 'mode': 'unified', 'dimension': 'area', 'depth': 'parent'},
+                'views': [{'id': 'thread', 'label': 'Timeline', 'mode': 'unified', 'dimension': 'area', 'depth': 'parent'},
                           {'id': 'areas', 'label': 'Areas', 'mode': 'split', 'dimension': 'area', 'depth': 'parent'},
-                          {'id': 'projects', 'label': 'Projects', 'mode': 'split', 'dimension': 'area', 'depth': 'leaf'},
-                          {'id': 'merges', 'label': 'Commit / merge', 'mode': 'split', 'dimension': 'change'}], 'events': events}
+                          {'id': 'projects', 'label': 'Subsystems', 'mode': 'split', 'dimension': 'area', 'depth': 'leaf'},
+                          {'id': 'kinds', 'label': 'Change type', 'mode': 'split', 'dimension': 'kind'}], 'events': events}
     manifest = {'repository': repo_name, 'repositoryUrl': url, 'revision': head, 'selection': 'first-parent',
                 'limit': limit, 'commitCount': len(events), 'capturedAt': dt.datetime.now(dt.timezone.utc).isoformat(),
-                'ordering': 'UTC committer timestamp', 'mergeDiff': 'first parent', 'pathPreviewLimit': 8}
+                'ordering': 'UTC committer timestamp', 'mergeDiff': 'first parent', 'pathPreviewLimit': 8, 'areaMapping': 'Changed paths; source code before docs, tests, releases and tooling', 'changeTypeMapping': 'Conventional commit subject prefix; Version Packages is release'}
     return document, manifest
 
 def main():

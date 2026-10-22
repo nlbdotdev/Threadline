@@ -1,12 +1,14 @@
 {
-  "repository": "Threadline",
-  "repositoryUrl": "https://github.com/nlbdotdev/Threadline",
-  "revision": "66c67a594793f3120f83357f6dbe68b5bc8e494e",
+  "repository": "svelte",
+  "repositoryUrl": "https://github.com/sveltejs/svelte",
+  "revision": "2334f5ed0bc9628fddd9767a92f7f12c09e50cd5",
   "selection": "first-parent",
-  "limit": 12,
-  "commitCount": 1,
-  "capturedAt": "2026-10-22T01:53:16.404143+00:00",
+  "limit": 80,
+  "commitCount": 80,
+  "capturedAt": "2026-10-22T02:44:14.838585+00:00",
   "ordering": "UTC committer timestamp",
   "mergeDiff": "first parent",
-  "pathPreviewLimit": 8
+  "pathPreviewLimit": 8,
+  "areaMapping": "Changed paths; source code before docs, tests, releases and tooling",
+  "changeTypeMapping": "Conventional commit subject prefix; Version Packages is release"
 }

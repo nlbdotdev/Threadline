@@ -1,16 +1,24 @@
-# Git history: a tight adapter example
+# Git history example
 
-The Lab's Git history tab renders a fixed first-parent slice of this public
-Threadline repository. It uses the existing Svelte component with a custom item
-snippet and the same portable document model.
+The demo shows 80 commits from [sveltejs/svelte](https://github.com/sveltejs/svelte).
+The exact revision, retrieval time, selection rule and repository URL are in
+`public/data/git-provenance.json`. The snapshot stays fixed until explicitly refreshed.
 
-Views: unified thread, root areas, individual projects, and commit/merge. Areas are
-derived from changed paths, with leaf projects grouped under Web apps, Games,
-Utilities, extensions, or Repository. A commit can touch multiple areas. Its first
-area is the primary rail; tags retain all areas and the area dropdown matches any
-descendant. The primary area prefers project paths over catalog bookkeeping, then
-uses changed-path counts and a stable ID tie-break. This is an explicit presentation
-rule, not a Git property.
+Views group commits into a single timeline, changed areas, subsystems, or change type.
+Path rules identify compiler, runtime, tests, docs, releases, and tooling. Subsystems
+use compiler phases, client/server runtime paths, and test suite directories.
+These are presentation rules based on file paths, not upstream labels.
+A commit appears once, preferring source changes over docs, tests, and release files;
+its tags and area filter still include every area it touches.
+
+Change type comes from the commit subject's conventional prefix (`fix`, `feat`,
+`docs`, `test`, `chore`), with `Version Packages` classified as a release. Unmatched
+subjects remain Other. Squash commits are shown as commits, not invented merges.
+
+Svelte is MIT licensed. The bundled metadata includes subjects, hashes, dates and
+path summaries, with links to the original commits. The upstream copyright and
+license text are retained in `public/data/svelte-LICENSE.txt`. No source file contents
+or author emails are bundled. This example is not affiliated with the Svelte team.
 
 Commit IDs are full hashes. UTC timestamps retain seconds; the original committer
 timestamp and offset are retained as metadata. Selection uses Git's first-parent
@@ -27,9 +35,9 @@ No commit bodies, author emails or file contents are included.
 ## Try another local repository
 
 ```sh
-npm run data:git -- --repo /path/to/repo --ref HEAD --limit 12
+npm run data:git -- --repo /path/to/repo --ref HEAD --limit 80
 # Optional explicit commit links:
-npm run data:git -- --repo /path/to/repo --ref main --limit 12 \
+npm run data:git -- --repo /path/to/repo --ref main --limit 80 \
   --url https://github.com/owner/repo
 ```
 
@@ -49,3 +57,16 @@ The source fixture is offline and fixed to a revision, so the example does not
 continually ingest its own commits. Refresh explicitly when a new slice is useful.
 `public/data/git-provenance.json` records revision, capture time, selection and
 diff methodology. The Lab is hosted at https://threadline.nlb.dev.
+
+## Reproduce the bundled example
+
+Clone the public repository with at least 100 first-parent commits available, then run:
+
+```sh
+npm run data:git -- --repo /path/to/svelte --ref REVISION --limit 80 \
+  --url https://github.com/sveltejs/svelte
+```
+
+Replace `REVISION` with the full hash from the provenance manifest. The adapter
+reads Git locally; builds and tests do not contact GitHub. Preserve the bundled
+Svelte license when refreshing the snapshot.

@@ -1,23 +1,281 @@
 {
   "version": 1,
   "id": "git-history",
-  "title": "Threadline commit history",
-  "description": "1 commits on the first-parent path ending at 66c67a59. Ordered by committer timestamp, with merge diffs against the first parent.",
+  "title": "svelte commit history",
+  "description": "80 commits on the first-parent path ending at 2334f5ed. Ordered by committer timestamp, with merge diffs against the first parent.",
   "dimensions": [
     {
       "id": "area",
-      "label": "Touched area",
+      "label": "Changed area",
       "values": [
         {
-          "id": "group:repository",
-          "label": "Repository",
+          "id": "group:tests",
+          "label": "Tests",
           "color": "#476e5e"
         },
         {
-          "id": "area:maintenance",
-          "label": "Repository maintenance",
-          "parent": "group:repository",
+          "id": "group:releases",
+          "label": "Releases",
+          "color": "#b97345"
+        },
+        {
+          "id": "group:runtime",
+          "label": "Runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "group:compiler",
+          "label": "Compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "group:docs",
+          "label": "Docs",
+          "color": "#c39a42"
+        },
+        {
+          "id": "group:tooling",
+          "label": "Tooling",
+          "color": "#627a7d"
+        },
+        {
+          "id": "area:releases",
+          "label": "Versioning & release notes",
+          "parent": "group:releases",
+          "color": "#b97345"
+        },
+        {
+          "id": "area:tests/runtime-runes",
+          "label": "Runtime Runes",
+          "parent": "group:tests",
           "color": "#476e5e"
+        },
+        {
+          "id": "area:runtime/client",
+          "label": "Client",
+          "parent": "group:runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "area:compiler/2-analyze",
+          "label": "Analyze",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:docs",
+          "label": "Documentation",
+          "parent": "group:docs",
+          "color": "#c39a42"
+        },
+        {
+          "id": "area:maintenance",
+          "label": "Build & repository",
+          "parent": "group:tooling",
+          "color": "#627a7d"
+        },
+        {
+          "id": "area:compiler/1-parse",
+          "label": "Parse",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:tests/hydration",
+          "label": "Hydration",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:compiler/3-transform",
+          "label": "Transform",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:tests/runtime-browser",
+          "label": "Runtime Browser",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:runtime/server",
+          "label": "Server",
+          "parent": "group:runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "area:tests/compiler-errors",
+          "label": "Compiler Errors",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:tests/validator",
+          "label": "Validator",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:compiler/utils",
+          "label": "Utils",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:tests/signals",
+          "label": "Signals",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:runtime/reactivity",
+          "label": "Reactivity",
+          "parent": "group:runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "area:tests/css",
+          "label": "Css",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:compiler/scope.js",
+          "label": "Scope.Js",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:tests/migrate",
+          "label": "Migrate",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:tests/server-side-rendering",
+          "label": "Server Side Rendering",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:runtime/version.js",
+          "label": "Version.Js",
+          "parent": "group:runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "area:tests/parser-modern",
+          "label": "Parser Modern",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:tests/print",
+          "label": "Print",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:compiler/migrate",
+          "label": "Migrate",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:runtime/shared",
+          "label": "Shared",
+          "parent": "group:runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "area:tests/runtime-legacy",
+          "label": "Runtime Legacy",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:compiler/print",
+          "label": "Print",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:compiler/errors.js",
+          "label": "Errors.Js",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:runtime/index-client.js",
+          "label": "Index Client.Js",
+          "parent": "group:runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "area:compiler/nodes.js",
+          "label": "Nodes.Js",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:runtime/types.d.ts",
+          "label": "Types.D.Ts",
+          "parent": "group:runtime",
+          "color": "#6486a5"
+        },
+        {
+          "id": "area:compiler/state.js",
+          "label": "State.Js",
+          "parent": "group:compiler",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "area:tests/parser-legacy",
+          "label": "Parser Legacy",
+          "parent": "group:tests",
+          "color": "#476e5e"
+        }
+      ]
+    },
+    {
+      "id": "kind",
+      "label": "Change type",
+      "values": [
+        {
+          "id": "fix",
+          "label": "Fix",
+          "color": "#476e5e"
+        },
+        {
+          "id": "feat",
+          "label": "Feature",
+          "color": "#6486a5"
+        },
+        {
+          "id": "docs",
+          "label": "Docs",
+          "color": "#9a6e89"
+        },
+        {
+          "id": "test",
+          "label": "Test",
+          "color": "#c39a42"
+        },
+        {
+          "id": "chore",
+          "label": "Maintenance",
+          "color": "#627a7d"
+        },
+        {
+          "id": "release",
+          "label": "Release",
+          "color": "#b97345"
+        },
+        {
+          "id": "other",
+          "label": "Other",
+          "color": "#887e70"
         }
       ]
     },
@@ -41,7 +299,7 @@
   "views": [
     {
       "id": "thread",
-      "label": "One thread",
+      "label": "Timeline",
       "mode": "unified",
       "dimension": "area",
       "depth": "parent"
@@ -55,57 +313,3503 @@
     },
     {
       "id": "projects",
-      "label": "Projects",
+      "label": "Subsystems",
       "mode": "split",
       "dimension": "area",
       "depth": "leaf"
     },
     {
-      "id": "merges",
-      "label": "Commit / merge",
+      "id": "kinds",
+      "label": "Change type",
       "mode": "split",
-      "dimension": "change"
+      "dimension": "kind"
     }
   ],
   "events": [
     {
-      "id": "66c67a594793f3120f83357f6dbe68b5bc8e494e",
-      "title": "Extract Threadline component, demo and docs into a standalone project",
+      "id": "2334f5ed0bc9628fddd9767a92f7f12c09e50cd5",
+      "title": "chore: add security policy section to AGENTS.md (#19067)",
       "date": {
-        "start": "2026-10-22T01:53:16Z"
+        "start": "2026-10-21T21:45:39Z"
       },
-      "summary": "42 files changed \u00b7 +6,682 / \u22120",
+      "summary": "1 files changed \u00b7 +4 / \u22120",
+      "attributes": {
+        "area": [
+          "area:docs"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "2334f5ed0bc9628fddd9767a92f7f12c09e50cd5",
+        "parents": [
+          "3c032adc27cba8b23bcbb24036bde5d522024f43"
+        ],
+        "sourceCommitterTime": "2026-10-22T07:45:39+10:00",
+        "filesChanged": "1",
+        "additions": "4",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "AGENTS.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Documentation"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/2334f5ed0bc9628fddd9767a92f7f12c09e50cd5"
+        }
+      ]
+    },
+    {
+      "id": "3c032adc27cba8b23bcbb24036bde5d522024f43",
+      "title": "chore: DRY out batch intersection logic (#19061)",
+      "date": {
+        "start": "2026-10-21T20:31:57Z"
+      },
+      "summary": "1 files changed \u00b7 +13 / \u221231",
+      "attributes": {
+        "area": [
+          "area:runtime/client"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "3c032adc27cba8b23bcbb24036bde5d522024f43",
+        "parents": [
+          "e27015feebe7e33bad231991fedce0b17ad95322"
+        ],
+        "sourceCommitterTime": "2026-10-21T16:31:57-04:00",
+        "filesChanged": "1",
+        "additions": "13",
+        "deletions": "31",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/internal/client/reactivity/batch.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/3c032adc27cba8b23bcbb24036bde5d522024f43"
+        }
+      ]
+    },
+    {
+      "id": "e27015feebe7e33bad231991fedce0b17ad95322",
+      "title": "chore: tidy up the CI workflow (#19046)",
+      "date": {
+        "start": "2026-10-21T19:26:24Z"
+      },
+      "summary": "4 files changed \u00b7 +43 / \u221237",
       "attributes": {
         "area": [
           "area:maintenance"
         ],
         "change": "commit",
-        "sha": "66c67a594793f3120f83357f6dbe68b5bc8e494e",
-        "parents": [],
-        "sourceCommitterTime": "2026-10-21T21:53:16-04:00",
-        "filesChanged": "42",
-        "additions": "6682",
-        "deletions": "0",
+        "kind": "chore",
+        "sha": "e27015feebe7e33bad231991fedce0b17ad95322",
+        "parents": [
+          "5bd3e3cd346e5f6584e5ad98ffc7e65eb7f73764"
+        ],
+        "sourceCommitterTime": "2026-10-21T15:26:24-04:00",
+        "filesChanged": "4",
+        "additions": "43",
+        "deletions": "37",
         "binaryFiles": "0",
         "pathPreview": [
-          ".gitignore",
-          ".prettierignore",
-          ".prettierrc.json",
-          "AGENTS.md",
-          "NOTICE.md",
-          "README.md",
-          "docs/component.md",
-          "docs/data.md"
+          ".github/actions/setup/action.yml",
+          ".github/workflows/ci.yml",
+          ".github/workflows/release.yml",
+          ".npmrc"
         ],
-        "repository": "Threadline"
+        "repository": "svelte"
       },
       "tags": [
-        "Repository maintenance"
+        "Build & repository"
       ],
       "sources": [
         {
           "label": "View commit",
-          "url": "https://github.com/nlbdotdev/Threadline/commit/66c67a594793f3120f83357f6dbe68b5bc8e494e"
+          "url": "https://github.com/sveltejs/svelte/commit/e27015feebe7e33bad231991fedce0b17ad95322"
+        }
+      ]
+    },
+    {
+      "id": "5bd3e3cd346e5f6584e5ad98ffc7e65eb7f73764",
+      "title": "chore: add new `batch.#is_skipped` method (#19058)",
+      "date": {
+        "start": "2026-10-21T18:40:00Z"
+      },
+      "summary": "1 files changed \u00b7 +14 / \u221213",
+      "attributes": {
+        "area": [
+          "area:runtime/client"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "5bd3e3cd346e5f6584e5ad98ffc7e65eb7f73764",
+        "parents": [
+          "91b5110b79dd6e6e8224dcf878602990d6ccc93e"
+        ],
+        "sourceCommitterTime": "2026-10-21T14:40:00-04:00",
+        "filesChanged": "1",
+        "additions": "14",
+        "deletions": "13",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/internal/client/reactivity/batch.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/5bd3e3cd346e5f6584e5ad98ffc7e65eb7f73764"
+        }
+      ]
+    },
+    {
+      "id": "91b5110b79dd6e6e8224dcf878602990d6ccc93e",
+      "title": "fix: use the first valid fallback role in `role` for a11y checks (#19045)",
+      "date": {
+        "start": "2026-10-21T13:39:10Z"
+      },
+      "summary": "4 files changed \u00b7 +257 / \u22125",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:tests/validator",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "91b5110b79dd6e6e8224dcf878602990d6ccc93e",
+        "parents": [
+          "50e3d28e1bb6b21b6f6bbeffed1d4718c1af19fc"
+        ],
+        "sourceCommitterTime": "2026-10-21T15:39:10+02:00",
+        "filesChanged": "4",
+        "additions": "257",
+        "deletions": "5",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/fallback-roles-a11y.md",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/a11y/index.js",
+          "packages/svelte/tests/validator/samples/a11y-fallback-roles/input.svelte",
+          "packages/svelte/tests/validator/samples/a11y-fallback-roles/warnings.json"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Validator",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/91b5110b79dd6e6e8224dcf878602990d6ccc93e"
+        }
+      ]
+    },
+    {
+      "id": "50e3d28e1bb6b21b6f6bbeffed1d4718c1af19fc",
+      "title": "chore: remove obsolete code (#19051)",
+      "date": {
+        "start": "2026-10-20T20:06:11Z"
+      },
+      "summary": "2 files changed \u00b7 +5 / \u221215",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "50e3d28e1bb6b21b6f6bbeffed1d4718c1af19fc",
+        "parents": [
+          "bd762fb1b004b6da6a0c0e609531092e82df95a5"
+        ],
+        "sourceCommitterTime": "2026-10-20T22:06:11+02:00",
+        "filesChanged": "2",
+        "additions": "5",
+        "deletions": "15",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/four-flowers-warn.md",
+          "packages/svelte/src/internal/client/reactivity/batch.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/50e3d28e1bb6b21b6f6bbeffed1d4718c1af19fc"
+        }
+      ]
+    },
+    {
+      "id": "bd762fb1b004b6da6a0c0e609531092e82df95a5",
+      "title": "fix: skip redundant attribute writes during hydration (#18869)",
+      "date": {
+        "start": "2026-10-20T15:53:02Z"
+      },
+      "summary": "9 files changed \u00b7 +295 / \u22122",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/hydration",
+          "area:tests/runtime-browser",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "bd762fb1b004b6da6a0c0e609531092e82df95a5",
+        "parents": [
+          "40bb08482f4857d91221638dec544a532bc35389"
+        ],
+        "sourceCommitterTime": "2026-10-20T17:53:02+02:00",
+        "filesChanged": "9",
+        "additions": "295",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/quiet-attributes-rest.md",
+          "packages/svelte/src/internal/client/dom/elements/attributes.js",
+          "packages/svelte/tests/hydration/samples/element-attribute-primitives/_config.js",
+          "packages/svelte/tests/hydration/samples/element-attribute-primitives/_expected.html",
+          "packages/svelte/tests/hydration/samples/element-attribute-primitives/main.svelte",
+          "packages/svelte/tests/runtime-browser/samples/hydration-attribute-custom-elements/_config.js",
+          "packages/svelte/tests/runtime-browser/samples/hydration-attribute-custom-elements/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-hydration-attribute-unchanged/_config.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Hydration",
+        "Runtime Browser",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/bd762fb1b004b6da6a0c0e609531092e82df95a5"
+        }
+      ]
+    },
+    {
+      "id": "40bb08482f4857d91221638dec544a532bc35389",
+      "title": "chore: more passing async tests (#19014)",
+      "date": {
+        "start": "2026-10-15T11:29:50Z"
+      },
+      "summary": "12 files changed \u00b7 +228 / \u221236",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "40bb08482f4857d91221638dec544a532bc35389",
+        "parents": [
+          "a841a29407e0892bcecb8b814d4f0e864cae635d"
+        ],
+        "sourceCommitterTime": "2026-10-15T07:29:50-04:00",
+        "filesChanged": "12",
+        "additions": "228",
+        "deletions": "36",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/async-commit-stale-reader-dropped-dep/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-commit-stale-reader-dropped-dep/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-overlap-multiple-3/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-overlap-multiple-4/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-overlap-multiple-fork-3/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-state-new-branch-5/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-state-new-branch-5/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-state-new-branch-fork-4/_config.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/40bb08482f4857d91221638dec544a532bc35389"
+        }
+      ]
+    },
+    {
+      "id": "a841a29407e0892bcecb8b814d4f0e864cae635d",
+      "title": "chore: bring over passing async-eager tests (#19011)",
+      "date": {
+        "start": "2026-10-15T10:37:33Z"
+      },
+      "summary": "4 files changed \u00b7 +120 / \u22120",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "a841a29407e0892bcecb8b814d4f0e864cae635d",
+        "parents": [
+          "44738572645ec47c9fcdb2637d64498b96858dcf"
+        ],
+        "sourceCommitterTime": "2026-10-15T06:37:33-04:00",
+        "filesChanged": "4",
+        "additions": "120",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/async-eager-new-in-earlier-batch/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-eager-new-in-earlier-batch/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-state-eager-not-connected/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-state-eager-not-connected/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/a841a29407e0892bcecb8b814d4f0e864cae635d"
+        }
+      ]
+    },
+    {
+      "id": "44738572645ec47c9fcdb2637d64498b96858dcf",
+      "title": "chore: bring over more tests that already pass on main (#19007)",
+      "date": {
+        "start": "2026-10-15T01:55:55Z"
+      },
+      "summary": "8 files changed \u00b7 +251 / \u22120",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "44738572645ec47c9fcdb2637d64498b96858dcf",
+        "parents": [
+          "34079beb4a8d03073f599885f78e212191d4c878"
+        ],
+        "sourceCommitterTime": "2026-10-14T21:55:55-04:00",
+        "filesChanged": "8",
+        "additions": "251",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/async-fork-await-block-static/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-await-block-static/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-branch-async-adopted/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-branch-async-adopted/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-equal-result-dropped/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-equal-result-dropped/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-overlapping-batches-stale-derived/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-overlapping-batches-stale-derived/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/44738572645ec47c9fcdb2637d64498b96858dcf"
+        }
+      ]
+    },
+    {
+      "id": "34079beb4a8d03073f599885f78e212191d4c878",
+      "title": "chore: add more async fork tests (#19004)",
+      "date": {
+        "start": "2026-10-14T23:47:35Z"
+      },
+      "summary": "16 files changed \u00b7 +456 / \u22120",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "34079beb4a8d03073f599885f78e212191d4c878",
+        "parents": [
+          "522f832aec0447fff12df0c2815c13093f3f79aa"
+        ],
+        "sourceCommitterTime": "2026-10-14T19:47:35-04:00",
+        "filesChanged": "16",
+        "additions": "456",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/async-fork-branch-update/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-branch-update/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-derived-new-reader/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-derived-new-reader/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-effect-write/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-effect-write/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-superseded-effect/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-superseded-effect/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/34079beb4a8d03073f599885f78e212191d4c878"
+        }
+      ]
+    },
+    {
+      "id": "522f832aec0447fff12df0c2815c13093f3f79aa",
+      "title": "chore: fix test timeouts (#19005)",
+      "date": {
+        "start": "2026-10-14T23:46:56Z"
+      },
+      "summary": "1 files changed \u00b7 +4 / \u22124",
+      "attributes": {
+        "area": [
+          "area:tests/signals"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "522f832aec0447fff12df0c2815c13093f3f79aa",
+        "parents": [
+          "79e7c3bd346bec0c683ef3bde4334778e5ef94e3"
+        ],
+        "sourceCommitterTime": "2026-10-14T19:46:56-04:00",
+        "filesChanged": "1",
+        "additions": "4",
+        "deletions": "4",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/signals/test.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Signals"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/522f832aec0447fff12df0c2815c13093f3f79aa"
+        }
+      ]
+    },
+    {
+      "id": "79e7c3bd346bec0c683ef3bde4334778e5ef94e3",
+      "title": "fix: `devalue` link in `hydratable_serialization_failed` error (#18999)",
+      "date": {
+        "start": "2026-10-14T20:32:05Z"
+      },
+      "summary": "4 files changed \u00b7 +9 / \u22124",
+      "attributes": {
+        "area": [
+          "area:runtime/server",
+          "area:docs",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "79e7c3bd346bec0c683ef3bde4334778e5ef94e3",
+        "parents": [
+          "86eb09b76ef9c81e8b34adf7eaaf63974a66aaa9"
+        ],
+        "sourceCommitterTime": "2026-10-14T16:32:05-04:00",
+        "filesChanged": "4",
+        "additions": "9",
+        "deletions": "4",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/ten-papayas-crash.md",
+          "documentation/docs/98-reference/.generated/server-errors.md",
+          "packages/svelte/messages/server-errors/errors.md",
+          "packages/svelte/src/internal/server/errors.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Server",
+        "Documentation",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/79e7c3bd346bec0c683ef3bde4334778e5ef94e3"
+        }
+      ]
+    },
+    {
+      "id": "86eb09b76ef9c81e8b34adf7eaaf63974a66aaa9",
+      "title": "chore: even more async tests (#18990)",
+      "date": {
+        "start": "2026-10-13T17:40:24Z"
+      },
+      "summary": "8 files changed \u00b7 +245 / \u22120",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "86eb09b76ef9c81e8b34adf7eaaf63974a66aaa9",
+        "parents": [
+          "4d2ad8a189ac89c4bede7ed6c3d6aec6065701f4"
+        ],
+        "sourceCommitterTime": "2026-10-13T13:40:24-04:00",
+        "filesChanged": "8",
+        "additions": "245",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/async-derived-equal-real-value-hidden/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-derived-equal-real-value-hidden/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-effect-write-keeps-batch-derived/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-effect-write-keeps-batch-derived/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-new-reader/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-commit-new-reader/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-stale-read-many-sources/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-stale-read-many-sources/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/86eb09b76ef9c81e8b34adf7eaaf63974a66aaa9"
+        }
+      ]
+    },
+    {
+      "id": "4d2ad8a189ac89c4bede7ed6c3d6aec6065701f4",
+      "title": "chore: add async-merge-blocking-pending test from #18983 (#18989)",
+      "date": {
+        "start": "2026-10-13T15:35:22Z"
+      },
+      "summary": "2 files changed \u00b7 +63 / \u22120",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "4d2ad8a189ac89c4bede7ed6c3d6aec6065701f4",
+        "parents": [
+          "d9acd2da90d1e0c23185c140cb29935937dd3ada"
+        ],
+        "sourceCommitterTime": "2026-10-13T11:35:22-04:00",
+        "filesChanged": "2",
+        "additions": "63",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/async-merge-blocking-pending/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-merge-blocking-pending/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/4d2ad8a189ac89c4bede7ed6c3d6aec6065701f4"
+        }
+      ]
+    },
+    {
+      "id": "d9acd2da90d1e0c23185c140cb29935937dd3ada",
+      "title": "test: add async tests that already pass on main, unskip async-overlap-multiple-2 (#18981)",
+      "date": {
+        "start": "2026-10-13T08:52:05Z"
+      },
+      "summary": "30 files changed \u00b7 +805 / \u22121",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "test",
+        "sha": "d9acd2da90d1e0c23185c140cb29935937dd3ada",
+        "parents": [
+          "6480a9737f0ccc610cb8692b637c5f86ad141646"
+        ],
+        "sourceCommitterTime": "2026-10-13T10:52:05+02:00",
+        "filesChanged": "30",
+        "additions": "805",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/async-commit-stale-reader-derived-equality/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-commit-stale-reader-derived-equality/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-commit-stale-reader-unchanged/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-commit-stale-reader-unchanged/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-derived-deferred-clean/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-derived-deferred-clean/main.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-derived-log-outside-reactivity-2/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-derived-log-outside-reactivity-2/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/d9acd2da90d1e0c23185c140cb29935937dd3ada"
+        }
+      ]
+    },
+    {
+      "id": "6480a9737f0ccc610cb8692b637c5f86ad141646",
+      "title": "chore: make Batch prev/next/started public (#18982)",
+      "date": {
+        "start": "2026-10-13T00:38:31Z"
+      },
+      "summary": "1 files changed \u00b7 +17 / \u221217",
+      "attributes": {
+        "area": [
+          "area:runtime/client"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "6480a9737f0ccc610cb8692b637c5f86ad141646",
+        "parents": [
+          "e22a67c432d18fa9647cdfd7b936fce4b7cb39e5"
+        ],
+        "sourceCommitterTime": "2026-10-12T20:38:31-04:00",
+        "filesChanged": "1",
+        "additions": "17",
+        "deletions": "17",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/internal/client/reactivity/batch.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/6480a9737f0ccc610cb8692b637c5f86ad141646"
+        }
+      ]
+    },
+    {
+      "id": "e22a67c432d18fa9647cdfd7b936fce4b7cb39e5",
+      "title": "chore: tidy up comments and types in batch.js and sources.js (#18980)",
+      "date": {
+        "start": "2026-10-13T00:20:45Z"
+      },
+      "summary": "2 files changed \u00b7 +5 / \u22126",
+      "attributes": {
+        "area": [
+          "area:runtime/client"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "e22a67c432d18fa9647cdfd7b936fce4b7cb39e5",
+        "parents": [
+          "0c61f1bb765683b8c01ced97e39900b85215114b"
+        ],
+        "sourceCommitterTime": "2026-10-12T20:20:45-04:00",
+        "filesChanged": "2",
+        "additions": "5",
+        "deletions": "6",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/internal/client/reactivity/batch.js",
+          "packages/svelte/src/internal/client/reactivity/sources.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/e22a67c432d18fa9647cdfd7b936fce4b7cb39e5"
+        }
+      ]
+    },
+    {
+      "id": "0c61f1bb765683b8c01ced97e39900b85215114b",
+      "title": "chore: merge #dirty_effects and #maybe_dirty_effects into #dirty_reactions (#18979)",
+      "date": {
+        "start": "2026-10-12T23:51:48Z"
+      },
+      "summary": "3 files changed \u00b7 +34 / \u221247",
+      "attributes": {
+        "area": [
+          "area:runtime/client"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "0c61f1bb765683b8c01ced97e39900b85215114b",
+        "parents": [
+          "707c28146b0f0a6d5404a1bd4769874c3c24851a"
+        ],
+        "sourceCommitterTime": "2026-10-12T19:51:48-04:00",
+        "filesChanged": "3",
+        "additions": "34",
+        "deletions": "47",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/internal/client/dom/blocks/boundary.js",
+          "packages/svelte/src/internal/client/reactivity/batch.js",
+          "packages/svelte/src/internal/client/reactivity/utils.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/0c61f1bb765683b8c01ced97e39900b85215114b"
+        }
+      ]
+    },
+    {
+      "id": "707c28146b0f0a6d5404a1bd4769874c3c24851a",
+      "title": "fix: keep creating state sources for property checks during component init (#18949)",
+      "date": {
+        "start": "2026-10-07T14:50:37Z"
+      },
+      "summary": "4 files changed \u00b7 +75 / \u22121",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "707c28146b0f0a6d5404a1bd4769874c3c24851a",
+        "parents": [
+          "c85120fb9fb4ff500bef189368f31b680421c4ba"
+        ],
+        "sourceCommitterTime": "2026-10-07T16:50:37+02:00",
+        "filesChanged": "4",
+        "additions": "75",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/keep-has-check-sources.md",
+          "packages/svelte/src/internal/client/proxy.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-discard-after-in-check/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-fork-discard-after-in-check/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/707c28146b0f0a6d5404a1bd4769874c3c24851a"
+        }
+      ]
+    },
+    {
+      "id": "c85120fb9fb4ff500bef189368f31b680421c4ba",
+      "title": "fix: track missing proxy keys in unowned deriveds (#18944)",
+      "date": {
+        "start": "2026-10-07T09:44:42Z"
+      },
+      "summary": "3 files changed \u00b7 +46 / \u22122",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/signals",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "c85120fb9fb4ff500bef189368f31b680421c4ba",
+        "parents": [
+          "10fdca7d705081cae17bf7d609d46ee6eb237d17"
+        ],
+        "sourceCommitterTime": "2026-10-07T11:44:42+02:00",
+        "filesChanged": "3",
+        "additions": "46",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/reactive-missing-property-checks.md",
+          "packages/svelte/src/internal/client/proxy.js",
+          "packages/svelte/tests/signals/test.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Signals",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/c85120fb9fb4ff500bef189368f31b680421c4ba"
+        }
+      ]
+    },
+    {
+      "id": "10fdca7d705081cae17bf7d609d46ee6eb237d17",
+      "title": "Version Packages (#18858)",
+      "date": {
+        "start": "2026-10-06T14:15:14Z"
+      },
+      "summary": "26 files changed \u00b7 +52 / \u2212117",
+      "attributes": {
+        "area": [
+          "area:runtime/version.js",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "release",
+        "sha": "10fdca7d705081cae17bf7d609d46ee6eb237d17",
+        "parents": [
+          "c580b381f78ebf8d92bf04ca999bfc2b28516ead"
+        ],
+        "sourceCommitterTime": "2026-10-06T16:15:14+02:00",
+        "filesChanged": "26",
+        "additions": "52",
+        "deletions": "117",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/brave-owls-wait.md",
+          ".changeset/calm-derived-connections.md",
+          ".changeset/duplicate-else-clause.md",
+          ".changeset/fuzzy-urls-rest.md",
+          ".changeset/hydration-custom-element-error-boundary.md",
+          ".changeset/late-handlers-wait.md",
+          ".changeset/major-papayas-run.md",
+          ".changeset/major-roses-help.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Version.Js",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/10fdca7d705081cae17bf7d609d46ee6eb237d17"
+        }
+      ]
+    },
+    {
+      "id": "c580b381f78ebf8d92bf04ca999bfc2b28516ead",
+      "title": "fix: prevent duplicate derived subscriptions on reconnect (#18899)",
+      "date": {
+        "start": "2026-10-06T13:36:21Z"
+      },
+      "summary": "3 files changed \u00b7 +81 / \u22121",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/signals",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "c580b381f78ebf8d92bf04ca999bfc2b28516ead",
+        "parents": [
+          "3f885e30161bebd61939fb02065d539c76369398"
+        ],
+        "sourceCommitterTime": "2026-10-06T15:36:21+02:00",
+        "filesChanged": "3",
+        "additions": "81",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/neat-derived-reconnections.md",
+          "packages/svelte/src/internal/client/runtime.js",
+          "packages/svelte/tests/signals/test.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Signals",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/c580b381f78ebf8d92bf04ca999bfc2b28516ead"
+        }
+      ]
+    },
+    {
+      "id": "3f885e30161bebd61939fb02065d539c76369398",
+      "title": "fix: don't throw state_unsafe_mutation when the focused element is removed with bind:activeElement (#18921)",
+      "date": {
+        "start": "2026-10-06T11:57:31Z"
+      },
+      "summary": "4 files changed \u00b7 +45 / \u22122",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-browser",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "3f885e30161bebd61939fb02065d539c76369398",
+        "parents": [
+          "fe4fb460b1b0bb1373684541c7cbc107b582e789"
+        ],
+        "sourceCommitterTime": "2026-10-06T13:57:31+02:00",
+        "filesChanged": "4",
+        "additions": "45",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/quiet-foxes-focus.md",
+          "packages/svelte/src/internal/client/dom/elements/bindings/document.js",
+          "packages/svelte/tests/runtime-browser/samples/bind-active-element-remove-focused/_config.js",
+          "packages/svelte/tests/runtime-browser/samples/bind-active-element-remove-focused/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Browser",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/3f885e30161bebd61939fb02065d539c76369398"
+        }
+      ]
+    },
+    {
+      "id": "fe4fb460b1b0bb1373684541c7cbc107b582e789",
+      "title": "fix: error if `{:else}` is followed by another `{:else}` or `{:else if ...}` (#18900)",
+      "date": {
+        "start": "2026-10-06T10:01:44Z"
+      },
+      "summary": "6 files changed \u00b7 +39 / \u22120",
+      "attributes": {
+        "area": [
+          "area:compiler/1-parse",
+          "area:tests/compiler-errors",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "fe4fb460b1b0bb1373684541c7cbc107b582e789",
+        "parents": [
+          "179f66b297a1cfd943ad31dcd575587d629c412c"
+        ],
+        "sourceCommitterTime": "2026-10-06T12:01:44+02:00",
+        "filesChanged": "6",
+        "additions": "39",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/duplicate-else-clause.md",
+          "packages/svelte/src/compiler/phases/1-parse/state/tag.js",
+          "packages/svelte/tests/compiler-errors/samples/each-block-duplicate-else/_config.js",
+          "packages/svelte/tests/compiler-errors/samples/each-block-duplicate-else/main.svelte",
+          "packages/svelte/tests/compiler-errors/samples/if-block-else-before-else-if/_config.js",
+          "packages/svelte/tests/compiler-errors/samples/if-block-else-before-else-if/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Parse",
+        "Compiler Errors",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/fe4fb460b1b0bb1373684541c7cbc107b582e789"
+        }
+      ]
+    },
+    {
+      "id": "179f66b297a1cfd943ad31dcd575587d629c412c",
+      "title": "fix: don't create async deriveds for a component destroyed while waiting for its top-level `await` (#18931)",
+      "date": {
+        "start": "2026-10-06T09:50:59Z"
+      },
+      "summary": "5 files changed \u00b7 +68 / \u22120",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "179f66b297a1cfd943ad31dcd575587d629c412c",
+        "parents": [
+          "79a0c0d4d8faf305a1c1c536712139f569c9e431"
+        ],
+        "sourceCommitterTime": "2026-10-06T11:50:59+02:00",
+        "filesChanged": "5",
+        "additions": "68",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/brave-owls-wait.md",
+          "packages/svelte/src/internal/client/reactivity/async.js",
+          "packages/svelte/tests/runtime-runes/samples/async-destroyed-before-blockers-settle/Child.svelte",
+          "packages/svelte/tests/runtime-runes/samples/async-destroyed-before-blockers-settle/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-destroyed-before-blockers-settle/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/179f66b297a1cfd943ad31dcd575587d629c412c"
+        }
+      ]
+    },
+    {
+      "id": "79a0c0d4d8faf305a1c1c536712139f569c9e431",
+      "title": "fix: attach event handlers that are assigned after a top-level `await` in production (#18933)",
+      "date": {
+        "start": "2026-10-06T09:30:52Z"
+      },
+      "summary": "4 files changed \u00b7 +46 / \u22122",
+      "attributes": {
+        "area": [
+          "area:compiler/3-transform",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "79a0c0d4d8faf305a1c1c536712139f569c9e431",
+        "parents": [
+          "14136f88fc81b10611f46d475932b5dcbea96653"
+        ],
+        "sourceCommitterTime": "2026-10-06T11:30:52+02:00",
+        "filesChanged": "4",
+        "additions": "46",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/late-handlers-wait.md",
+          "packages/svelte/src/compiler/phases/3-transform/client/visitors/shared/events.js",
+          "packages/svelte/tests/runtime-runes/samples/async-event-handler-blockers/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-event-handler-blockers/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Transform",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/79a0c0d4d8faf305a1c1c536712139f569c9e431"
+        }
+      ]
+    },
+    {
+      "id": "14136f88fc81b10611f46d475932b5dcbea96653",
+      "title": "fix: print `{#await}` blocks that only have a pending branch (#18908)",
+      "date": {
+        "start": "2026-10-06T09:18:44Z"
+      },
+      "summary": "4 files changed \u00b7 +16 / \u22121",
+      "attributes": {
+        "area": [
+          "area:compiler/print",
+          "area:tests/print",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "14136f88fc81b10611f46d475932b5dcbea96653",
+        "parents": [
+          "f3827053284672787a51d564de69d537c493daf6"
+        ],
+        "sourceCommitterTime": "2026-10-06T11:18:44+02:00",
+        "filesChanged": "4",
+        "additions": "16",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/print-await-pending-only.md",
+          "packages/svelte/src/compiler/print/index.js",
+          "packages/svelte/tests/print/samples/await-block/input.svelte",
+          "packages/svelte/tests/print/samples/await-block/output.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Print",
+        "Print",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/14136f88fc81b10611f46d475932b5dcbea96653"
+        }
+      ]
+    },
+    {
+      "id": "f3827053284672787a51d564de69d537c493daf6",
+      "title": "docs: link svelte/transition module to transition directive (#18918)",
+      "date": {
+        "start": "2026-10-06T09:18:21Z"
+      },
+      "summary": "1 files changed \u00b7 +2 / \u22120",
+      "attributes": {
+        "area": [
+          "area:docs"
+        ],
+        "change": "commit",
+        "kind": "docs",
+        "sha": "f3827053284672787a51d564de69d537c493daf6",
+        "parents": [
+          "5cbdd34374379a40ade66bb7d528821c409b3fb1"
+        ],
+        "sourceCommitterTime": "2026-10-06T11:18:21+02:00",
+        "filesChanged": "1",
+        "additions": "2",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "documentation/docs/98-reference/21-svelte-transition.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Documentation"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/f3827053284672787a51d564de69d537c493daf6"
+        }
+      ]
+    },
+    {
+      "id": "5cbdd34374379a40ade66bb7d528821c409b3fb1",
+      "title": "fix: recover when an unexpected node replaces a nested boundary comment (#18925)",
+      "date": {
+        "start": "2026-10-06T09:09:05Z"
+      },
+      "summary": "6 files changed \u00b7 +34 / \u22124",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/hydration",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "5cbdd34374379a40ade66bb7d528821c409b3fb1",
+        "parents": [
+          "e5169f26c58cb9dbe49a8832e8e5639f915b686d"
+        ],
+        "sourceCommitterTime": "2026-10-06T11:09:05+02:00",
+        "filesChanged": "6",
+        "additions": "34",
+        "deletions": "4",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/nested-boundary-hydrate.md",
+          "packages/svelte/src/internal/client/dom/blocks/boundary.js",
+          "packages/svelte/tests/hydration/samples/boundary-nested-extra-node/_config.js",
+          "packages/svelte/tests/hydration/samples/boundary-nested-extra-node/_expected.html",
+          "packages/svelte/tests/hydration/samples/boundary-nested-extra-node/_override.html",
+          "packages/svelte/tests/hydration/samples/boundary-nested-extra-node/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Hydration",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/5cbdd34374379a40ade66bb7d528821c409b3fb1"
+        }
+      ]
+    },
+    {
+      "id": "e5169f26c58cb9dbe49a8832e8e5639f915b686d",
+      "title": "docs: note that a pending snippet skips SSR of boundary content (#18922)",
+      "date": {
+        "start": "2026-10-06T08:34:26Z"
+      },
+      "summary": "1 files changed \u00b7 +1 / \u22121",
+      "attributes": {
+        "area": [
+          "area:docs"
+        ],
+        "change": "commit",
+        "kind": "docs",
+        "sha": "e5169f26c58cb9dbe49a8832e8e5639f915b686d",
+        "parents": [
+          "7e83327400eeaa7e054935439792b696c282c1cf"
+        ],
+        "sourceCommitterTime": "2026-10-06T10:34:26+02:00",
+        "filesChanged": "1",
+        "additions": "1",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "documentation/docs/05-special-elements/01-svelte-boundary.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Documentation"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/e5169f26c58cb9dbe49a8832e8e5639f915b686d"
+        }
+      ]
+    },
+    {
+      "id": "7e83327400eeaa7e054935439792b696c282c1cf",
+      "title": "fix: avoid tracking SvelteURLSearchParams during URL updates (#18791)",
+      "date": {
+        "start": "2026-10-06T05:22:22Z"
+      },
+      "summary": "3 files changed \u00b7 +24 / \u22121",
+      "attributes": {
+        "area": [
+          "area:runtime/reactivity",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "7e83327400eeaa7e054935439792b696c282c1cf",
+        "parents": [
+          "7c2fcdae6a29fb3b36855dc8e86eb7ce4c56b93a"
+        ],
+        "sourceCommitterTime": "2026-10-06T07:22:22+02:00",
+        "filesChanged": "3",
+        "additions": "24",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/fuzzy-urls-rest.md",
+          "packages/svelte/src/reactivity/url-search-params.js",
+          "packages/svelte/src/reactivity/url.test.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Reactivity",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/7e83327400eeaa7e054935439792b696c282c1cf"
+        }
+      ]
+    },
+    {
+      "id": "7c2fcdae6a29fb3b36855dc8e86eb7ce4c56b93a",
+      "title": "docs: add note about `#key` in best-practices (#18851)",
+      "date": {
+        "start": "2026-10-03T11:35:20Z"
+      },
+      "summary": "1 files changed \u00b7 +4 / \u22120",
+      "attributes": {
+        "area": [
+          "area:docs"
+        ],
+        "change": "commit",
+        "kind": "docs",
+        "sha": "7c2fcdae6a29fb3b36855dc8e86eb7ce4c56b93a",
+        "parents": [
+          "4c884722f86ac8f71d2dc1675151ff3cce9f3ce1"
+        ],
+        "sourceCommitterTime": "2026-10-03T13:35:20+02:00",
+        "filesChanged": "1",
+        "additions": "4",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "documentation/docs/07-misc/01-best-practices.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Documentation"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/7c2fcdae6a29fb3b36855dc8e86eb7ce4c56b93a"
+        }
+      ]
+    },
+    {
+      "id": "4c884722f86ac8f71d2dc1675151ff3cce9f3ce1",
+      "title": "docs: fix mention of svelte config in best practices (#18917)",
+      "date": {
+        "start": "2026-10-03T10:36:21Z"
+      },
+      "summary": "1 files changed \u00b7 +1 / \u22121",
+      "attributes": {
+        "area": [
+          "area:docs"
+        ],
+        "change": "commit",
+        "kind": "docs",
+        "sha": "4c884722f86ac8f71d2dc1675151ff3cce9f3ce1",
+        "parents": [
+          "020242d6bef059df9ae8c13dc8dbff4c9b31e0ff"
+        ],
+        "sourceCommitterTime": "2026-10-03T12:36:21+02:00",
+        "filesChanged": "1",
+        "additions": "1",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "documentation/docs/07-misc/01-best-practices.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Documentation"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/4c884722f86ac8f71d2dc1675151ff3cce9f3ce1"
+        }
+      ]
+    },
+    {
+      "id": "020242d6bef059df9ae8c13dc8dbff4c9b31e0ff",
+      "title": "fix: ensure hydration state restoration for custom element attribute updates (#18467)",
+      "date": {
+        "start": "2026-09-28T21:31:46Z"
+      },
+      "summary": "4 files changed \u00b7 +206 / \u2212162",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "020242d6bef059df9ae8c13dc8dbff4c9b31e0ff",
+        "parents": [
+          "28b99aa8e66e50c80d1b7fd77502333a7e02bc72"
+        ],
+        "sourceCommitterTime": "2026-09-28T23:31:46+02:00",
+        "filesChanged": "4",
+        "additions": "206",
+        "deletions": "162",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/hydration-custom-element-error-boundary.md",
+          "packages/svelte/src/internal/client/dom/elements/attributes.js",
+          "packages/svelte/tests/runtime-runes/samples/hydration-custom-element-error-boundary/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/hydration-custom-element-error-boundary/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/020242d6bef059df9ae8c13dc8dbff4c9b31e0ff"
+        }
+      ]
+    },
+    {
+      "id": "28b99aa8e66e50c80d1b7fd77502333a7e02bc72",
+      "title": "fix: error at compile time when a declaration in a snippet redeclares one of its parameters (#18842)",
+      "date": {
+        "start": "2026-09-28T21:05:21Z"
+      },
+      "summary": "4 files changed \u00b7 +44 / \u22120",
+      "attributes": {
+        "area": [
+          "area:compiler/scope.js",
+          "area:tests/validator",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "28b99aa8e66e50c80d1b7fd77502333a7e02bc72",
+        "parents": [
+          "5b44f26bc286ccbcd0602031e4a48fbdbb605dcd"
+        ],
+        "sourceCommitterTime": "2026-09-28T23:05:21+02:00",
+        "filesChanged": "4",
+        "additions": "44",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/snippet-parameter-redeclared.md",
+          "packages/svelte/src/compiler/phases/scope.js",
+          "packages/svelte/tests/validator/samples/declaration-tag-snippet-parameter/errors.json",
+          "packages/svelte/tests/validator/samples/declaration-tag-snippet-parameter/input.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Scope.Js",
+        "Validator",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/28b99aa8e66e50c80d1b7fd77502333a7e02bc72"
+        }
+      ]
+    },
+    {
+      "id": "5b44f26bc286ccbcd0602031e4a48fbdbb605dcd",
+      "title": "fix: keep a reactive assignment with no dependencies when `migrate` cannot turn it into a declaration (#18817)",
+      "date": {
+        "start": "2026-09-28T20:57:36Z"
+      },
+      "summary": "4 files changed \u00b7 +38 / \u22122",
+      "attributes": {
+        "area": [
+          "area:compiler/migrate",
+          "area:tests/migrate",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "5b44f26bc286ccbcd0602031e4a48fbdbb605dcd",
+        "parents": [
+          "8ef693e94eddca38d92c62357efed877afd41ddf"
+        ],
+        "sourceCommitterTime": "2026-09-28T22:57:36+02:00",
+        "filesChanged": "4",
+        "additions": "38",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/migrate-keep-assignment.md",
+          "packages/svelte/src/compiler/migrate/index.js",
+          "packages/svelte/tests/migrate/samples/labeled-assignment-without-dependencies/input.svelte",
+          "packages/svelte/tests/migrate/samples/labeled-assignment-without-dependencies/output.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Migrate",
+        "Migrate",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/5b44f26bc286ccbcd0602031e4a48fbdbb605dcd"
+        }
+      ]
+    },
+    {
+      "id": "8ef693e94eddca38d92c62357efed877afd41ddf",
+      "title": "fix: don't hang `migrate` on a declaration that shares a line with its script tag (#18816)",
+      "date": {
+        "start": "2026-09-28T20:55:39Z"
+      },
+      "summary": "4 files changed \u00b7 +14 / \u22122",
+      "attributes": {
+        "area": [
+          "area:compiler/migrate",
+          "area:tests/migrate",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "8ef693e94eddca38d92c62357efed877afd41ddf",
+        "parents": [
+          "688a4e49b8d82bb344d7ad5d635e97913d46e63a"
+        ],
+        "sourceCommitterTime": "2026-09-28T22:55:39+02:00",
+        "filesChanged": "4",
+        "additions": "14",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/migrate-tag-line.md",
+          "packages/svelte/src/compiler/migrate/index.js",
+          "packages/svelte/tests/migrate/samples/props-on-script-tag-line/input.svelte",
+          "packages/svelte/tests/migrate/samples/props-on-script-tag-line/output.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Migrate",
+        "Migrate",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/8ef693e94eddca38d92c62357efed877afd41ddf"
+        }
+      ]
+    },
+    {
+      "id": "688a4e49b8d82bb344d7ad5d635e97913d46e63a",
+      "title": "fix: preserve location information for `await` wrappers (#18859)",
+      "date": {
+        "start": "2026-09-28T20:17:40Z"
+      },
+      "summary": "2 files changed \u00b7 +7 / \u22121",
+      "attributes": {
+        "area": [
+          "area:compiler/3-transform",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "688a4e49b8d82bb344d7ad5d635e97913d46e63a",
+        "parents": [
+          "7fe14a508adbfa85ba53e43b9e9c6700d6fde588"
+        ],
+        "sourceCommitterTime": "2026-09-28T22:17:40+02:00",
+        "filesChanged": "2",
+        "additions": "7",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/major-roses-help.md",
+          "packages/svelte/src/compiler/phases/3-transform/client/visitors/AwaitExpression.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Transform",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/688a4e49b8d82bb344d7ad5d635e97913d46e63a"
+        }
+      ]
+    },
+    {
+      "id": "7fe14a508adbfa85ba53e43b9e9c6700d6fde588",
+      "title": "fix: ignore stale boundary resets after destruction (#18886)",
+      "date": {
+        "start": "2026-09-28T20:15:35Z"
+      },
+      "summary": "4 files changed \u00b7 +125 / \u22123",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "7fe14a508adbfa85ba53e43b9e9c6700d6fde588",
+        "parents": [
+          "7fb397e78f3c07908cb88ef894658d7433eb3938"
+        ],
+        "sourceCommitterTime": "2026-09-28T22:15:35+02:00",
+        "filesChanged": "4",
+        "additions": "125",
+        "deletions": "3",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/stale-boundary-reset.md",
+          "packages/svelte/src/internal/client/dom/blocks/boundary.js",
+          "packages/svelte/tests/runtime-runes/samples/error-boundary-reset-destroyed/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/error-boundary-reset-destroyed/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/7fe14a508adbfa85ba53e43b9e9c6700d6fde588"
+        }
+      ]
+    },
+    {
+      "id": "7fb397e78f3c07908cb88ef894658d7433eb3938",
+      "title": "fix: handle deferred transitions aborted before initialization (#18776)",
+      "date": {
+        "start": "2026-09-28T12:32:59Z"
+      },
+      "summary": "4 files changed \u00b7 +45 / \u22123",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "7fb397e78f3c07908cb88ef894658d7433eb3938",
+        "parents": [
+          "f90853565966bc0bab57c99fe7d669a91bef0f4c"
+        ],
+        "sourceCommitterTime": "2026-09-28T14:32:59+02:00",
+        "filesChanged": "4",
+        "additions": "45",
+        "deletions": "3",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/tidy-ducks-reset.md",
+          "packages/svelte/src/internal/client/dom/elements/transitions.js",
+          "packages/svelte/tests/runtime-runes/samples/deferred-outro-restored/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/deferred-outro-restored/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/7fb397e78f3c07908cb88ef894658d7433eb3938"
+        }
+      ]
+    },
+    {
+      "id": "f90853565966bc0bab57c99fe7d669a91bef0f4c",
+      "title": "fix: prevent untracked derived reads from retaining dependencies (#18829)",
+      "date": {
+        "start": "2026-09-25T21:41:51Z"
+      },
+      "summary": "3 files changed \u00b7 +65 / \u221213",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/signals",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "f90853565966bc0bab57c99fe7d669a91bef0f4c",
+        "parents": [
+          "a956c2bd1fe84eff8e01662b948234c9193c6253"
+        ],
+        "sourceCommitterTime": "2026-09-25T23:41:51+02:00",
+        "filesChanged": "3",
+        "additions": "65",
+        "deletions": "13",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/calm-derived-connections.md",
+          "packages/svelte/src/internal/client/runtime.js",
+          "packages/svelte/tests/signals/test.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Signals",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/f90853565966bc0bab57c99fe7d669a91bef0f4c"
+        }
+      ]
+    },
+    {
+      "id": "a956c2bd1fe84eff8e01662b948234c9193c6253",
+      "title": "fix: error when using `let:` directives on a component with a `children` snippet (#18873)",
+      "date": {
+        "start": "2026-09-25T02:44:12Z"
+      },
+      "summary": "9 files changed \u00b7 +97 / \u22120",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:compiler/errors.js",
+          "area:docs",
+          "area:tests/compiler-errors",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "a956c2bd1fe84eff8e01662b948234c9193c6253",
+        "parents": [
+          "75aa6ba38d58c83ff012bed77c39edb814e43bc6"
+        ],
+        "sourceCommitterTime": "2026-09-24T22:44:12-04:00",
+        "filesChanged": "9",
+        "additions": "97",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/sour-lets-hide.md",
+          "documentation/docs/98-reference/.generated/compile-errors.md",
+          "packages/svelte/messages/compile-errors/template.md",
+          "packages/svelte/src/compiler/errors.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/LetDirective.js",
+          "packages/svelte/tests/compiler-errors/samples/let-directive-children-snippet-expression/_config.js",
+          "packages/svelte/tests/compiler-errors/samples/let-directive-children-snippet-expression/main.svelte",
+          "packages/svelte/tests/compiler-errors/samples/let-directive-children-snippet/_config.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Errors.Js",
+        "Documentation",
+        "Compiler Errors",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/a956c2bd1fe84eff8e01662b948234c9193c6253"
+        }
+      ]
+    },
+    {
+      "id": "75aa6ba38d58c83ff012bed77c39edb814e43bc6",
+      "title": "fix: don't warn about redundant `link` role on `<area>` without `href` (#18872)",
+      "date": {
+        "start": "2026-09-25T02:44:00Z"
+      },
+      "summary": "4 files changed \u00b7 +24 / \u22122",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:tests/validator",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "75aa6ba38d58c83ff012bed77c39edb814e43bc6",
+        "parents": [
+          "f7ca0a44a5d198d600521afa44341736c9bee0c8"
+        ],
+        "sourceCommitterTime": "2026-09-24T22:44:00-04:00",
+        "filesChanged": "4",
+        "additions": "24",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/quiet-areas-link.md",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/a11y/index.js",
+          "packages/svelte/tests/validator/samples/a11y-no-redundant-roles/input.svelte",
+          "packages/svelte/tests/validator/samples/a11y-no-redundant-roles/warnings.json"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Validator",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/75aa6ba38d58c83ff012bed77c39edb814e43bc6"
+        }
+      ]
+    },
+    {
+      "id": "f7ca0a44a5d198d600521afa44341736c9bee0c8",
+      "title": "chore: fix typos in code comments (#18860)",
+      "date": {
+        "start": "2026-09-24T22:04:17Z"
+      },
+      "summary": "4 files changed \u00b7 +4 / \u22124",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:runtime/index-client.js",
+          "area:runtime/server"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "f7ca0a44a5d198d600521afa44341736c9bee0c8",
+        "parents": [
+          "98e547535d9286cfd4163fe3a6d85c7053db6c6e"
+        ],
+        "sourceCommitterTime": "2026-09-24T18:04:17-04:00",
+        "filesChanged": "4",
+        "additions": "4",
+        "deletions": "4",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/index-client.js",
+          "packages/svelte/src/internal/client/dom/css.js",
+          "packages/svelte/src/internal/client/runtime.js",
+          "packages/svelte/src/internal/server/index.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Index Client.Js",
+        "Server"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/f7ca0a44a5d198d600521afa44341736c9bee0c8"
+        }
+      ]
+    },
+    {
+      "id": "98e547535d9286cfd4163fe3a6d85c7053db6c6e",
+      "title": "fix: flush anything pending before invoking flushSync callback function (#18878)",
+      "date": {
+        "start": "2026-09-24T20:49:15Z"
+      },
+      "summary": "2 files changed \u00b7 +13 / \u22124",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "98e547535d9286cfd4163fe3a6d85c7053db6c6e",
+        "parents": [
+          "da2f83343bf5e2fb183881b74ef06fac24f0e249"
+        ],
+        "sourceCommitterTime": "2026-09-24T16:49:15-04:00",
+        "filesChanged": "2",
+        "additions": "13",
+        "deletions": "4",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/major-papayas-run.md",
+          "packages/svelte/src/internal/client/reactivity/batch.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/98e547535d9286cfd4163fe3a6d85c7053db6c6e"
+        }
+      ]
+    },
+    {
+      "id": "da2f83343bf5e2fb183881b74ef06fac24f0e249",
+      "title": "fix: read batch-local array on each-block commit (#18879)",
+      "date": {
+        "start": "2026-09-24T20:47:52Z"
+      },
+      "summary": "2 files changed \u00b7 +11 / \u22124",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "da2f83343bf5e2fb183881b74ef06fac24f0e249",
+        "parents": [
+          "58297c5a73e6a06687c3892efbfc807eec3f23af"
+        ],
+        "sourceCommitterTime": "2026-09-24T16:47:52-04:00",
+        "filesChanged": "2",
+        "additions": "11",
+        "deletions": "4",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/short-radios-sneeze.md",
+          "packages/svelte/src/internal/client/dom/blocks/each.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/da2f83343bf5e2fb183881b74ef06fac24f0e249"
+        }
+      ]
+    },
+    {
+      "id": "58297c5a73e6a06687c3892efbfc807eec3f23af",
+      "title": "chore: extract some minor changes from #18861 (#18866)",
+      "date": {
+        "start": "2026-09-24T08:19:37Z"
+      },
+      "summary": "6 files changed \u00b7 +17 / \u221211",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:runtime/reactivity"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "58297c5a73e6a06687c3892efbfc807eec3f23af",
+        "parents": [
+          "38098a931142dfef6ca7330d33264d1908b698fa"
+        ],
+        "sourceCommitterTime": "2026-09-24T10:19:37+02:00",
+        "filesChanged": "6",
+        "additions": "17",
+        "deletions": "11",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/internal/client/dev/tracing.js",
+          "packages/svelte/src/internal/client/dom/blocks/each.js",
+          "packages/svelte/src/internal/client/reactivity/batch.js",
+          "packages/svelte/src/internal/client/reactivity/sources.js",
+          "packages/svelte/src/internal/client/runtime.js",
+          "packages/svelte/src/reactivity/date.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Reactivity"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/58297c5a73e6a06687c3892efbfc807eec3f23af"
+        }
+      ]
+    },
+    {
+      "id": "38098a931142dfef6ca7330d33264d1908b698fa",
+      "title": "fix: don't overwrite an unchanged spread `value` (#18864)",
+      "date": {
+        "start": "2026-09-23T16:58:28Z"
+      },
+      "summary": "4 files changed \u00b7 +53 / \u22121",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-browser",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "38098a931142dfef6ca7330d33264d1908b698fa",
+        "parents": [
+          "325620ba63eeff13c9f36e42806a545aaa7ee242"
+        ],
+        "sourceCommitterTime": "2026-09-23T18:58:28+02:00",
+        "filesChanged": "4",
+        "additions": "53",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/quiet-inputs-keep.md",
+          "packages/svelte/src/internal/client/dom/elements/attributes.js",
+          "packages/svelte/tests/runtime-browser/samples/spread-input-number-incomplete-value/_config.js",
+          "packages/svelte/tests/runtime-browser/samples/spread-input-number-incomplete-value/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Browser",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/38098a931142dfef6ca7330d33264d1908b698fa"
+        }
+      ]
+    },
+    {
+      "id": "325620ba63eeff13c9f36e42806a545aaa7ee242",
+      "title": "fix: bypass error boundaries for hydration recovery (#18841)",
+      "date": {
+        "start": "2026-09-23T16:37:04Z"
+      },
+      "summary": "6 files changed \u00b7 +32 / \u22122",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/hydration",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "325620ba63eeff13c9f36e42806a545aaa7ee242",
+        "parents": [
+          "803f59b171e1f962c0b0acb20dba2074bc9d2e84"
+        ],
+        "sourceCommitterTime": "2026-09-23T12:37:04-04:00",
+        "filesChanged": "6",
+        "additions": "32",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/tidy-pandas-hydrate.md",
+          "packages/svelte/src/internal/client/dom/blocks/boundary.js",
+          "packages/svelte/src/internal/client/error-handling.js",
+          "packages/svelte/tests/hydration/samples/boundary-mismatch-recovery/_config.js",
+          "packages/svelte/tests/hydration/samples/boundary-mismatch-recovery/_expected.html",
+          "packages/svelte/tests/hydration/samples/boundary-mismatch-recovery/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Hydration",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/325620ba63eeff13c9f36e42806a545aaa7ee242"
+        }
+      ]
+    },
+    {
+      "id": "803f59b171e1f962c0b0acb20dba2074bc9d2e84",
+      "title": "fix: avoid reinserting dynamic elements during hydration (#18855)",
+      "date": {
+        "start": "2026-09-22T14:09:26Z"
+      },
+      "summary": "8 files changed \u00b7 +112 / \u22121",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/hydration",
+          "area:tests/runtime-browser",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "803f59b171e1f962c0b0acb20dba2074bc9d2e84",
+        "parents": [
+          "636eaaaa6f064b55072e7d192bb76dc9d8c4516e"
+        ],
+        "sourceCommitterTime": "2026-09-22T16:09:26+02:00",
+        "filesChanged": "8",
+        "additions": "112",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/tidy-trees-stay.md",
+          "packages/svelte/src/internal/client/dom/blocks/svelte-element.js",
+          "packages/svelte/tests/hydration/samples/dynamic-element-child-mismatch/_config.js",
+          "packages/svelte/tests/hydration/samples/dynamic-element-child-mismatch/_expected.html",
+          "packages/svelte/tests/hydration/samples/dynamic-element-child-mismatch/main.svelte",
+          "packages/svelte/tests/runtime-browser/assert.js",
+          "packages/svelte/tests/runtime-browser/samples/dynamic-element-hydration-preserves-connection/_config.js",
+          "packages/svelte/tests/runtime-browser/samples/dynamic-element-hydration-preserves-connection/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Hydration",
+        "Runtime Browser",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/803f59b171e1f962c0b0acb20dba2074bc9d2e84"
+        }
+      ]
+    },
+    {
+      "id": "636eaaaa6f064b55072e7d192bb76dc9d8c4516e",
+      "title": "Version Packages (#18750)",
+      "date": {
+        "start": "2026-09-18T23:43:30Z"
+      },
+      "summary": "17 files changed \u00b7 +34 / \u221272",
+      "attributes": {
+        "area": [
+          "area:runtime/version.js",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "release",
+        "sha": "636eaaaa6f064b55072e7d192bb76dc9d8c4516e",
+        "parents": [
+          "8030ff2a2c8b84231f1d8f3bbc7d9974f12669b9"
+        ],
+        "sourceCommitterTime": "2026-09-18T19:43:30-04:00",
+        "filesChanged": "17",
+        "additions": "34",
+        "deletions": "72",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/calm-events-cleanup.md",
+          ".changeset/calm-heads-glow.md",
+          ".changeset/calm-render-results.md",
+          ".changeset/each-fallback-scope.md",
+          ".changeset/easy-points-tan.md",
+          ".changeset/gold-trams-knock.md",
+          ".changeset/green-inputs-ssr.md",
+          ".changeset/grumpy-pens-press.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Version.Js",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/636eaaaa6f064b55072e7d192bb76dc9d8c4516e"
+        }
+      ]
+    },
+    {
+      "id": "8030ff2a2c8b84231f1d8f3bbc7d9974f12669b9",
+      "title": "fix: remove incorrect special handling of :export pseudo-selectors (#18839)",
+      "date": {
+        "start": "2026-09-18T21:23:42Z"
+      },
+      "summary": "3 files changed \u00b7 +1 / \u221210",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:tests/css"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "8030ff2a2c8b84231f1d8f3bbc7d9974f12669b9",
+        "parents": [
+          "a72dc8eadbf63189d9ae12e9ea18711378f8f12f"
+        ],
+        "sourceCommitterTime": "2026-09-18T23:23:42+02:00",
+        "filesChanged": "3",
+        "additions": "1",
+        "deletions": "10",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/compiler/phases/2-analyze/css/css-prune.js",
+          "packages/svelte/tests/css/samples/global-head-only/expected.css",
+          "packages/svelte/tests/css/samples/global-head-only/input.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Css"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/8030ff2a2c8b84231f1d8f3bbc7d9974f12669b9"
+        }
+      ]
+    },
+    {
+      "id": "a72dc8eadbf63189d9ae12e9ea18711378f8f12f",
+      "title": "fix: make Object.hasOwn reactive for state proxies (#18838)",
+      "date": {
+        "start": "2026-09-18T19:24:06Z"
+      },
+      "summary": "4 files changed \u00b7 +48 / \u22127",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "a72dc8eadbf63189d9ae12e9ea18711378f8f12f",
+        "parents": [
+          "6eb720a1b7cafca3ebe0ab5c76674272cd3044f9"
+        ],
+        "sourceCommitterTime": "2026-09-18T15:24:06-04:00",
+        "filesChanged": "4",
+        "additions": "48",
+        "deletions": "7",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/reactive-has-own.md",
+          "packages/svelte/src/internal/client/proxy.js",
+          "packages/svelte/tests/runtime-runes/samples/object-has-own-reactive/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/object-has-own-reactive/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/a72dc8eadbf63189d9ae12e9ea18711378f8f12f"
+        }
+      ]
+    },
+    {
+      "id": "6eb720a1b7cafca3ebe0ab5c76674272cd3044f9",
+      "title": "chore: scope.js stops importing from the analysis visitors (#18787)",
+      "date": {
+        "start": "2026-09-11T11:47:35Z"
+      },
+      "summary": "5 files changed \u00b7 +42 / \u221243",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:compiler/scope.js"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "6eb720a1b7cafca3ebe0ab5c76674272cd3044f9",
+        "parents": [
+          "e6ae460caa7286a7c68011ad0a1cbfe805e239ff"
+        ],
+        "sourceCommitterTime": "2026-09-11T13:47:35+02:00",
+        "filesChanged": "5",
+        "additions": "42",
+        "deletions": "43",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/ClassDeclaration.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/FunctionDeclaration.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/VariableDeclarator.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/utils.js",
+          "packages/svelte/src/compiler/phases/scope.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Scope.Js"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/6eb720a1b7cafca3ebe0ab5c76674272cd3044f9"
+        }
+      ]
+    },
+    {
+      "id": "e6ae460caa7286a7c68011ad0a1cbfe805e239ff",
+      "title": "chore: analysis and transform stop importing each other (#18786)",
+      "date": {
+        "start": "2026-09-11T11:47:34Z"
+      },
+      "summary": "9 files changed \u00b7 +46 / \u221254",
+      "attributes": {
+        "area": [
+          "area:compiler/3-transform",
+          "area:compiler/2-analyze",
+          "area:compiler/scope.js",
+          "area:compiler/utils"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "e6ae460caa7286a7c68011ad0a1cbfe805e239ff",
+        "parents": [
+          "5981c060d23a7119bd5bdcef99b9c20432525056"
+        ],
+        "sourceCommitterTime": "2026-09-11T13:47:34+02:00",
+        "filesChanged": "9",
+        "additions": "46",
+        "deletions": "54",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/compiler/phases/2-analyze/index.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/Identifier.js",
+          "packages/svelte/src/compiler/phases/3-transform/client/utils.js",
+          "packages/svelte/src/compiler/phases/3-transform/client/visitors/AssignmentExpression.js",
+          "packages/svelte/src/compiler/phases/3-transform/client/visitors/CallExpression.js",
+          "packages/svelte/src/compiler/phases/3-transform/client/visitors/VariableDeclaration.js",
+          "packages/svelte/src/compiler/phases/3-transform/utils.js",
+          "packages/svelte/src/compiler/phases/scope.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Transform",
+        "Analyze",
+        "Scope.Js",
+        "Utils"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/e6ae460caa7286a7c68011ad0a1cbfe805e239ff"
+        }
+      ]
+    },
+    {
+      "id": "5981c060d23a7119bd5bdcef99b9c20432525056",
+      "title": "chore: move parser helpers next to their users (#18785)",
+      "date": {
+        "start": "2026-09-11T11:47:34Z"
+      },
+      "summary": "15 files changed \u00b7 +57 / \u221258",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:compiler/1-parse",
+          "area:compiler/utils",
+          "area:compiler/nodes.js"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "5981c060d23a7119bd5bdcef99b9c20432525056",
+        "parents": [
+          "f2ad10ecd2bbb090ce32af54796490ab8332b991"
+        ],
+        "sourceCommitterTime": "2026-09-11T13:47:34+02:00",
+        "filesChanged": "15",
+        "additions": "57",
+        "deletions": "58",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/src/compiler/phases/1-parse/index.js",
+          "packages/svelte/src/compiler/phases/1-parse/state/element.js",
+          "packages/svelte/src/compiler/phases/1-parse/state/tag.js",
+          "packages/svelte/src/compiler/phases/1-parse/utils/create.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/BindDirective.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/SvelteBody.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/SvelteDocument.js",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/SvelteWindow.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Parse",
+        "Utils",
+        "Nodes.Js"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/5981c060d23a7119bd5bdcef99b9c20432525056"
+        }
+      ]
+    },
+    {
+      "id": "f2ad10ecd2bbb090ce32af54796490ab8332b991",
+      "title": "fix: preserve global CSS without scopable elements (#18793)",
+      "date": {
+        "start": "2026-09-11T11:40:31Z"
+      },
+      "summary": "5 files changed \u00b7 +32 / \u22126",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:tests/css",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "f2ad10ecd2bbb090ce32af54796490ab8332b991",
+        "parents": [
+          "a8a9b02e380ce8c22e1893c0964cfc9a4916a468"
+        ],
+        "sourceCommitterTime": "2026-09-11T13:40:31+02:00",
+        "filesChanged": "5",
+        "additions": "32",
+        "deletions": "6",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/calm-heads-glow.md",
+          "packages/svelte/src/compiler/phases/2-analyze/css/css-prune.js",
+          "packages/svelte/tests/css/samples/global-head-only/_config.js",
+          "packages/svelte/tests/css/samples/global-head-only/expected.css",
+          "packages/svelte/tests/css/samples/global-head-only/input.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Css",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/f2ad10ecd2bbb090ce32af54796490ab8332b991"
+        }
+      ]
+    },
+    {
+      "id": "a8a9b02e380ce8c22e1893c0964cfc9a4916a468",
+      "title": "fix: reduce SSR render result garbage collection (#18798)",
+      "date": {
+        "start": "2026-09-11T11:35:22Z"
+      },
+      "summary": "4 files changed \u00b7 +108 / \u221268",
+      "attributes": {
+        "area": [
+          "area:runtime/server",
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "a8a9b02e380ce8c22e1893c0964cfc9a4916a468",
+        "parents": [
+          "6be176df2f760e314023e3ddbf42b45fc5575dbb"
+        ],
+        "sourceCommitterTime": "2026-09-11T13:35:22+02:00",
+        "filesChanged": "4",
+        "additions": "108",
+        "deletions": "68",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/calm-render-results.md",
+          "benchmarking/benchmarks/ssr/wrapper/wrapper_bench.js",
+          "packages/svelte/src/internal/server/renderer.js",
+          "packages/svelte/src/internal/server/renderer.test.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Server",
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/a8a9b02e380ce8c22e1893c0964cfc9a4916a468"
+        }
+      ]
+    },
+    {
+      "id": "6be176df2f760e314023e3ddbf42b45fc5575dbb",
+      "title": "fix: resolve the fallback of an each block in the enclosing scope (#18803)",
+      "date": {
+        "start": "2026-09-11T11:24:55Z"
+      },
+      "summary": "4 files changed \u00b7 +30 / \u22121",
+      "attributes": {
+        "area": [
+          "area:compiler/scope.js",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "6be176df2f760e314023e3ddbf42b45fc5575dbb",
+        "parents": [
+          "34b13ac3e4a8c7919eb8d044a7c31d2d16f72678"
+        ],
+        "sourceCommitterTime": "2026-09-11T13:24:55+02:00",
+        "filesChanged": "4",
+        "additions": "30",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/each-fallback-scope.md",
+          "packages/svelte/src/compiler/phases/scope.js",
+          "packages/svelte/tests/runtime-runes/samples/each-fallback-outer-scope/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/each-fallback-outer-scope/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Scope.Js",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/6be176df2f760e314023e3ddbf42b45fc5575dbb"
+        }
+      ]
+    },
+    {
+      "id": "34b13ac3e4a8c7919eb8d044a7c31d2d16f72678",
+      "title": "fix: keep `$state.eager` when used as a variable initializer (#18809)",
+      "date": {
+        "start": "2026-09-11T10:35:15Z"
+      },
+      "summary": "4 files changed \u00b7 +18 / \u22120",
+      "attributes": {
+        "area": [
+          "area:compiler/3-transform",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "34b13ac3e4a8c7919eb8d044a7c31d2d16f72678",
+        "parents": [
+          "ce89035ecbf88ee131838527d29584b968d450fb"
+        ],
+        "sourceCommitterTime": "2026-09-11T12:35:15+02:00",
+        "filesChanged": "4",
+        "additions": "18",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/state-eager-let-declaration.md",
+          "packages/svelte/src/compiler/phases/3-transform/client/visitors/VariableDeclaration.js",
+          "packages/svelte/tests/runtime-runes/samples/state-eager-declaration/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/state-eager-declaration/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Transform",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/34b13ac3e4a8c7919eb8d044a7c31d2d16f72678"
+        }
+      ]
+    },
+    {
+      "id": "ce89035ecbf88ee131838527d29584b968d450fb",
+      "title": "fix: prevent effect tree of batches from interfering with each other (#18508)",
+      "date": {
+        "start": "2026-09-09T09:47:41Z"
+      },
+      "summary": "4 files changed \u00b7 +175 / \u221271",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "ce89035ecbf88ee131838527d29584b968d450fb",
+        "parents": [
+          "d16099ef0fa666f3610ef75ad9fca3252b0b47d0"
+        ],
+        "sourceCommitterTime": "2026-09-09T11:47:41+02:00",
+        "filesChanged": "4",
+        "additions": "175",
+        "deletions": "71",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/gold-trams-knock.md",
+          "packages/svelte/src/internal/client/reactivity/batch.js",
+          "packages/svelte/tests/runtime-runes/samples/async-commit-effect-overlap/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/async-commit-effect-overlap/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/ce89035ecbf88ee131838527d29584b968d450fb"
+        }
+      ]
+    },
+    {
+      "id": "d16099ef0fa666f3610ef75ad9fca3252b0b47d0",
+      "title": "fix: remove `WAS_MARKED` flag in favor of `Set` (#18127)",
+      "date": {
+        "start": "2026-09-09T08:58:29Z"
+      },
+      "summary": "8 files changed \u00b7 +38 / \u221263",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "d16099ef0fa666f3610ef75ad9fca3252b0b47d0",
+        "parents": [
+          "5895c637b04dc8667020c8d326807c3f3a984472"
+        ],
+        "sourceCommitterTime": "2026-09-09T10:58:29+02:00",
+        "filesChanged": "8",
+        "additions": "38",
+        "deletions": "63",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/grumpy-pens-press.md",
+          "benchmarking/benchmarks/reactivity/index.js",
+          "packages/svelte/src/internal/client/constants.js",
+          "packages/svelte/src/internal/client/dev/debug.js",
+          "packages/svelte/src/internal/client/reactivity/deriveds.js",
+          "packages/svelte/src/internal/client/reactivity/sources.js",
+          "packages/svelte/src/internal/client/reactivity/utils.js",
+          "packages/svelte/src/internal/client/runtime.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/d16099ef0fa666f3610ef75ad9fca3252b0b47d0"
+        }
+      ]
+    },
+    {
+      "id": "5895c637b04dc8667020c8d326807c3f3a984472",
+      "title": "fix: recognise `aria-braillelabel` and `aria-brailleroledescription` as known ARIA attributes (#18765)",
+      "date": {
+        "start": "2026-09-03T14:31:52Z"
+      },
+      "summary": "3 files changed \u00b7 +8 / \u22122",
+      "attributes": {
+        "area": [
+          "area:compiler/2-analyze",
+          "area:tests/validator",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "5895c637b04dc8667020c8d326807c3f3a984472",
+        "parents": [
+          "9e695442380a7c3bec5bf90d6c7341c3e1ae9bac"
+        ],
+        "sourceCommitterTime": "2026-09-03T16:31:52+02:00",
+        "filesChanged": "3",
+        "additions": "8",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/wild-cases-smile.md",
+          "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/a11y/constants.js",
+          "packages/svelte/tests/validator/samples/a11y-aria-props/input.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Analyze",
+        "Validator",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/5895c637b04dc8667020c8d326807c3f3a984472"
+        }
+      ]
+    },
+    {
+      "id": "9e695442380a7c3bec5bf90d6c7341c3e1ae9bac",
+      "title": "fix: in non-async mode, only push variable to current_sources when active_reaction is updating (#18550)",
+      "date": {
+        "start": "2026-09-03T14:06:28Z"
+      },
+      "summary": "3 files changed \u00b7 +49 / \u22121",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/signals",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "9e695442380a7c3bec5bf90d6c7341c3e1ae9bac",
+        "parents": [
+          "6f7857af5921f03dcad2057c92be4b169ac4df4a"
+        ],
+        "sourceCommitterTime": "2026-09-03T16:06:28+02:00",
+        "filesChanged": "3",
+        "additions": "49",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/tricky-cooks-help.md",
+          "packages/svelte/src/internal/client/runtime.js",
+          "packages/svelte/tests/signals/test.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Signals",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/9e695442380a7c3bec5bf90d6c7341c3e1ae9bac"
+        }
+      ]
+    },
+    {
+      "id": "6f7857af5921f03dcad2057c92be4b169ac4df4a",
+      "title": "chore: compiler profiling + parser bench (#18767)",
+      "date": {
+        "start": "2026-09-03T13:24:50Z"
+      },
+      "summary": "7 files changed \u00b7 +556 / \u22121",
+      "attributes": {
+        "area": [
+          "area:docs",
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "6f7857af5921f03dcad2057c92be4b169ac4df4a",
+        "parents": [
+          "4bf15ae6f304b9aa49a4396c3f51dc423d0722dc"
+        ],
+        "sourceCommitterTime": "2026-09-03T15:24:50+02:00",
+        "filesChanged": "7",
+        "additions": "556",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "benchmarking/analyze-compiler-profile.js",
+          "benchmarking/benchmarks/compiler/index.js",
+          "benchmarking/benchmarks/compiler/parser.bench.js",
+          "benchmarking/compiler-profiling.md",
+          "benchmarking/profile-compiler.js",
+          "benchmarking/run.js",
+          "package.json"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Documentation",
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/6f7857af5921f03dcad2057c92be4b169ac4df4a"
+        }
+      ]
+    },
+    {
+      "id": "4bf15ae6f304b9aa49a4396c3f51dc423d0722dc",
+      "title": "fix: throw when `setContext` is called after an `await` during SSR (#18739)",
+      "date": {
+        "start": "2026-08-31T20:23:00Z"
+      },
+      "summary": "11 files changed \u00b7 +57 / \u221237",
+      "attributes": {
+        "area": [
+          "area:runtime/server",
+          "area:runtime/client",
+          "area:runtime/shared",
+          "area:docs",
+          "area:tests/server-side-rendering",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "4bf15ae6f304b9aa49a4396c3f51dc423d0722dc",
+        "parents": [
+          "9d91a40fafcb126b857384fc39219d44877df631"
+        ],
+        "sourceCommitterTime": "2026-08-31T22:23:00+02:00",
+        "filesChanged": "11",
+        "additions": "57",
+        "deletions": "37",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/olive-mice-argue.md",
+          "documentation/docs/98-reference/.generated/client-errors.md",
+          "documentation/docs/98-reference/.generated/shared-errors.md",
+          "packages/svelte/messages/client-errors/errors.md",
+          "packages/svelte/messages/shared-errors/errors.md",
+          "packages/svelte/src/internal/client/errors.js",
+          "packages/svelte/src/internal/server/context.js",
+          "packages/svelte/src/internal/server/renderer.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Server",
+        "Client",
+        "Shared",
+        "Documentation",
+        "Server Side Rendering",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/4bf15ae6f304b9aa49a4396c3f51dc423d0722dc"
+        }
+      ]
+    },
+    {
+      "id": "9d91a40fafcb126b857384fc39219d44877df631",
+      "title": "chore: bump packages (#18752)",
+      "date": {
+        "start": "2026-08-31T14:23:42Z"
+      },
+      "summary": "4 files changed \u00b7 +94 / \u2212391",
+      "attributes": {
+        "area": [
+          "area:compiler/utils",
+          "area:runtime/types.d.ts",
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "9d91a40fafcb126b857384fc39219d44877df631",
+        "parents": [
+          "b580455c9cf5c903c1726866e6808b81332480fc"
+        ],
+        "sourceCommitterTime": "2026-08-31T16:23:42+02:00",
+        "filesChanged": "4",
+        "additions": "94",
+        "deletions": "391",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/package.json",
+          "packages/svelte/src/compiler/utils/ast.js",
+          "packages/svelte/src/internal/types.d.ts",
+          "pnpm-lock.yaml"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Utils",
+        "Types.D.Ts",
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/9d91a40fafcb126b857384fc39219d44877df631"
+        }
+      ]
+    },
+    {
+      "id": "b580455c9cf5c903c1726866e6808b81332480fc",
+      "title": "fix: serialize input default values during SSR (#18733)",
+      "date": {
+        "start": "2026-08-31T12:58:37Z"
+      },
+      "summary": "6 files changed \u00b7 +41 / \u22122",
+      "attributes": {
+        "area": [
+          "area:compiler/3-transform",
+          "area:runtime/server",
+          "area:tests/server-side-rendering",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "b580455c9cf5c903c1726866e6808b81332480fc",
+        "parents": [
+          "b2c22ab66d0978dfa14bb92196a6ab45ad0031a4"
+        ],
+        "sourceCommitterTime": "2026-08-31T14:58:37+02:00",
+        "filesChanged": "6",
+        "additions": "41",
+        "deletions": "2",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/green-inputs-ssr.md",
+          "packages/svelte/src/compiler/phases/3-transform/server/visitors/shared/element.js",
+          "packages/svelte/src/internal/server/index.js",
+          "packages/svelte/tests/server-side-rendering/samples/input-default-value/_config.js",
+          "packages/svelte/tests/server-side-rendering/samples/input-default-value/_expected.html",
+          "packages/svelte/tests/server-side-rendering/samples/input-default-value/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Transform",
+        "Server",
+        "Server Side Rendering",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/b580455c9cf5c903c1726866e6808b81332480fc"
+        }
+      ]
+    },
+    {
+      "id": "b2c22ab66d0978dfa14bb92196a6ab45ad0031a4",
+      "title": "chore: add regression test for teardown value behavior (#18751)",
+      "date": {
+        "start": "2026-08-31T12:25:50Z"
+      },
+      "summary": "2 files changed \u00b7 +37 / \u22120",
+      "attributes": {
+        "area": [
+          "area:tests/runtime-runes"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "b2c22ab66d0978dfa14bb92196a6ab45ad0031a4",
+        "parents": [
+          "b1142efe966cc7091fb6d79b1756e79ad97b4f59"
+        ],
+        "sourceCommitterTime": "2026-08-31T14:25:50+02:00",
+        "filesChanged": "2",
+        "additions": "37",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/tests/runtime-runes/samples/effect-loop-teardown-value/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/effect-loop-teardown-value/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Runtime Runes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/b2c22ab66d0978dfa14bb92196a6ab45ad0031a4"
+        }
+      ]
+    },
+    {
+      "id": "b1142efe966cc7091fb6d79b1756e79ad97b4f59",
+      "title": "perf: speed up parser a little bit (#18736)",
+      "date": {
+        "start": "2026-08-31T12:19:55Z"
+      },
+      "summary": "9 files changed \u00b7 +123 / \u221270",
+      "attributes": {
+        "area": [
+          "area:compiler/1-parse",
+          "area:compiler/state.js",
+          "area:compiler/utils",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "other",
+        "sha": "b1142efe966cc7091fb6d79b1756e79ad97b4f59",
+        "parents": [
+          "34142af3a1125dd512bfb88b396a2e1de1dace45"
+        ],
+        "sourceCommitterTime": "2026-08-31T14:19:55+02:00",
+        "filesChanged": "9",
+        "additions": "123",
+        "deletions": "70",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/tall-kids-juggle.md",
+          "packages/svelte/src/compiler/phases/1-parse/index.js",
+          "packages/svelte/src/compiler/phases/1-parse/read/script.js",
+          "packages/svelte/src/compiler/phases/1-parse/read/style.js",
+          "packages/svelte/src/compiler/phases/1-parse/state/element.js",
+          "packages/svelte/src/compiler/phases/1-parse/utils/html.js",
+          "packages/svelte/src/compiler/phases/1-parse/utils/whitespace.js",
+          "packages/svelte/src/compiler/state.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Parse",
+        "State.Js",
+        "Utils",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/b1142efe966cc7091fb6d79b1756e79ad97b4f59"
+        }
+      ]
+    },
+    {
+      "id": "34142af3a1125dd512bfb88b396a2e1de1dace45",
+      "title": "perf: build identifier and member chain expressions without acorn (#18740)",
+      "date": {
+        "start": "2026-08-31T08:49:16Z"
+      },
+      "summary": "3 files changed \u00b7 +125 / \u22125",
+      "attributes": {
+        "area": [
+          "area:compiler/1-parse",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "other",
+        "sha": "34142af3a1125dd512bfb88b396a2e1de1dace45",
+        "parents": [
+          "504a7536c6fd1aa2c977503d6a4e7abb2b806902"
+        ],
+        "sourceCommitterTime": "2026-08-31T10:49:16+02:00",
+        "filesChanged": "3",
+        "additions": "125",
+        "deletions": "5",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/easy-points-tan.md",
+          "packages/svelte/src/compiler/phases/1-parse/acorn.js",
+          "packages/svelte/src/compiler/phases/1-parse/read/expression.js"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Parse",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/34142af3a1125dd512bfb88b396a2e1de1dace45"
+        }
+      ]
+    },
+    {
+      "id": "504a7536c6fd1aa2c977503d6a4e7abb2b806902",
+      "title": "perf: stop scanning the whole template for every expression (#18738)",
+      "date": {
+        "start": "2026-08-31T08:49:15Z"
+      },
+      "summary": "9 files changed \u00b7 +209 / \u2212204",
+      "attributes": {
+        "area": [
+          "area:compiler/1-parse",
+          "area:tests/parser-modern",
+          "area:tests/parser-legacy",
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "other",
+        "sha": "504a7536c6fd1aa2c977503d6a4e7abb2b806902",
+        "parents": [
+          "214dd3d005e78c90d6c93e76a07b801303f53b53"
+        ],
+        "sourceCommitterTime": "2026-08-31T10:49:15+02:00",
+        "filesChanged": "9",
+        "additions": "209",
+        "deletions": "204",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "packages/svelte/package.json",
+          "packages/svelte/src/compiler/phases/1-parse/acorn.js",
+          "packages/svelte/src/compiler/phases/1-parse/read/context.js",
+          "packages/svelte/src/compiler/phases/1-parse/state/tag.js",
+          "packages/svelte/tests/parser-legacy/samples/each-block-destructured/output.json",
+          "packages/svelte/tests/parser-modern/samples/each-block-object-pattern-special-characters/output.json",
+          "packages/svelte/tests/parser-modern/samples/each-block-object-pattern/output.json",
+          "packages/svelte/tests/parser-modern/samples/loose-valid-each-as/output.json"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Parse",
+        "Parser Modern",
+        "Parser Legacy",
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/504a7536c6fd1aa2c977503d6a4e7abb2b806902"
+        }
+      ]
+    },
+    {
+      "id": "214dd3d005e78c90d6c93e76a07b801303f53b53",
+      "title": "fix: cancel deferred event listener attachment (#18749)",
+      "date": {
+        "start": "2026-08-31T06:38:45Z"
+      },
+      "summary": "5 files changed \u00b7 +41 / \u22121",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:tests/runtime-runes",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "214dd3d005e78c90d6c93e76a07b801303f53b53",
+        "parents": [
+          "7bc0a70fe64dbb3fa3848b741963f31d1e10a8dc"
+        ],
+        "sourceCommitterTime": "2026-08-31T08:38:45+02:00",
+        "filesChanged": "5",
+        "additions": "41",
+        "deletions": "1",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/calm-events-cleanup.md",
+          "packages/svelte/src/internal/client/dom/elements/events.js",
+          "packages/svelte/tests/runtime-runes/samples/event-cleanup-before-attachment/Child.svelte",
+          "packages/svelte/tests/runtime-runes/samples/event-cleanup-before-attachment/_config.js",
+          "packages/svelte/tests/runtime-runes/samples/event-cleanup-before-attachment/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Runtime Runes",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/214dd3d005e78c90d6c93e76a07b801303f53b53"
+        }
+      ]
+    },
+    {
+      "id": "7bc0a70fe64dbb3fa3848b741963f31d1e10a8dc",
+      "title": "Version Packages (#18682)",
+      "date": {
+        "start": "2026-08-28T23:26:56Z"
+      },
+      "summary": "50 files changed \u00b7 +102 / \u2212237",
+      "attributes": {
+        "area": [
+          "area:runtime/version.js",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "release",
+        "sha": "7bc0a70fe64dbb3fa3848b741963f31d1e10a8dc",
+        "parents": [
+          "6374a2a0db1cc2130e9ee69a233ce6d4c7334f82"
+        ],
+        "sourceCommitterTime": "2026-08-29T01:26:56+02:00",
+        "filesChanged": "50",
+        "additions": "102",
+        "deletions": "237",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/async-store-sub-blocker.md",
+          ".changeset/boundary-teardown-error-routing.md",
+          ".changeset/calm-dates-track.md",
+          ".changeset/clean-head-anchors.md",
+          ".changeset/cool-spoons-tap.md",
+          ".changeset/eighty-moons-happen.md",
+          ".changeset/every-rabbits-rule.md",
+          ".changeset/fix-binding-ownership-ignore.md"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Version.Js",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/7bc0a70fe64dbb3fa3848b741963f31d1e10a8dc"
+        }
+      ]
+    },
+    {
+      "id": "6374a2a0db1cc2130e9ee69a233ce6d4c7334f82",
+      "title": "chore: move `@types/trusted-types` to devDependencies (#18730)",
+      "date": {
+        "start": "2026-08-28T08:52:34Z"
+      },
+      "summary": "3 files changed \u00b7 +9 / \u22124",
+      "attributes": {
+        "area": [
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "6374a2a0db1cc2130e9ee69a233ce6d4c7334f82",
+        "parents": [
+          "4ae5eb3f23df00de4d60bf40ff5a96580a0719dc"
+        ],
+        "sourceCommitterTime": "2026-08-28T10:52:34+02:00",
+        "filesChanged": "3",
+        "additions": "9",
+        "deletions": "4",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/quiet-types-move.md",
+          "packages/svelte/package.json",
+          "pnpm-lock.yaml"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/6374a2a0db1cc2130e9ee69a233ce6d4c7334f82"
+        }
+      ]
+    },
+    {
+      "id": "4ae5eb3f23df00de4d60bf40ff5a96580a0719dc",
+      "title": "feat: add has function to createContext (#18472)",
+      "date": {
+        "start": "2026-08-27T20:58:40Z"
+      },
+      "summary": "14 files changed \u00b7 +47 / \u221223",
+      "attributes": {
+        "area": [
+          "area:runtime/client",
+          "area:runtime/server",
+          "area:runtime/shared",
+          "area:docs",
+          "area:tests/runtime-runes",
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "feat",
+        "sha": "4ae5eb3f23df00de4d60bf40ff5a96580a0719dc",
+        "parents": [
+          "5034b59e9e6cff42451d9136650f5fbde4c25260"
+        ],
+        "sourceCommitterTime": "2026-08-27T22:58:40+02:00",
+        "filesChanged": "14",
+        "additions": "47",
+        "deletions": "23",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/short-feet-admire.md",
+          "documentation/docs/06-runtime/02-context.md",
+          "documentation/docs/98-reference/.generated/shared-errors.md",
+          "packages/svelte/messages/shared-errors/errors.md",
+          "packages/svelte/src/internal/client/context.js",
+          "packages/svelte/src/internal/server/context.js",
+          "packages/svelte/src/internal/shared/context.js",
+          "packages/svelte/tests/runtime-runes/samples/create-context-programmatic/Child.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Client",
+        "Server",
+        "Shared",
+        "Documentation",
+        "Runtime Runes",
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/4ae5eb3f23df00de4d60bf40ff5a96580a0719dc"
+        }
+      ]
+    },
+    {
+      "id": "5034b59e9e6cff42451d9136650f5fbde4c25260",
+      "title": "chore: bump playwright (#18729)",
+      "date": {
+        "start": "2026-08-27T20:38:50Z"
+      },
+      "summary": "3 files changed \u00b7 +50 / \u221220",
+      "attributes": {
+        "area": [
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "chore",
+        "sha": "5034b59e9e6cff42451d9136650f5fbde4c25260",
+        "parents": [
+          "74197ccbe1d84cab76c1eefbf3def43903661691"
+        ],
+        "sourceCommitterTime": "2026-08-27T22:38:50+02:00",
+        "filesChanged": "3",
+        "additions": "50",
+        "deletions": "20",
+        "binaryFiles": "0",
+        "pathPreview": [
+          "package.json",
+          "packages/svelte/package.json",
+          "pnpm-lock.yaml"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/5034b59e9e6cff42451d9136650f5fbde4c25260"
+        }
+      ]
+    },
+    {
+      "id": "74197ccbe1d84cab76c1eefbf3def43903661691",
+      "title": "feat: add getOrInsert/getOrInsertComputed to SvelteMap (#18728)",
+      "date": {
+        "start": "2026-08-27T15:05:23Z"
+      },
+      "summary": "4 files changed \u00b7 +110 / \u22120",
+      "attributes": {
+        "area": [
+          "area:runtime/reactivity",
+          "area:releases",
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "kind": "feat",
+        "sha": "74197ccbe1d84cab76c1eefbf3def43903661691",
+        "parents": [
+          "edbe11ebc93c26410867748a34c4ed311d128de0"
+        ],
+        "sourceCommitterTime": "2026-08-27T17:05:23+02:00",
+        "filesChanged": "4",
+        "additions": "110",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/tasty-years-hammer.md",
+          "packages/svelte/src/reactivity/map.js",
+          "packages/svelte/src/reactivity/map.test.ts",
+          "packages/svelte/types/index.d.ts"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Reactivity",
+        "Versioning & release notes",
+        "Build & repository"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/74197ccbe1d84cab76c1eefbf3def43903661691"
+        }
+      ]
+    },
+    {
+      "id": "edbe11ebc93c26410867748a34c4ed311d128de0",
+      "title": "fix: properly apply static textarea value attribute during CSR (#18727)",
+      "date": {
+        "start": "2026-08-27T14:27:08Z"
+      },
+      "summary": "4 files changed \u00b7 +19 / \u22127",
+      "attributes": {
+        "area": [
+          "area:compiler/3-transform",
+          "area:tests/runtime-legacy",
+          "area:releases"
+        ],
+        "change": "commit",
+        "kind": "fix",
+        "sha": "edbe11ebc93c26410867748a34c4ed311d128de0",
+        "parents": [
+          "05b69164d11aa241f16c9d3904d91fb4aa357970"
+        ],
+        "sourceCommitterTime": "2026-08-27T16:27:08+02:00",
+        "filesChanged": "4",
+        "additions": "19",
+        "deletions": "7",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".changeset/polite-zoos-melt.md",
+          "packages/svelte/src/compiler/phases/3-transform/client/visitors/RegularElement.js",
+          "packages/svelte/tests/runtime-legacy/samples/textarea-value/_config.js",
+          "packages/svelte/tests/runtime-legacy/samples/textarea-value/main.svelte"
+        ],
+        "repository": "svelte"
+      },
+      "tags": [
+        "Transform",
+        "Runtime Legacy",
+        "Versioning & release notes"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/sveltejs/svelte/commit/edbe11ebc93c26410867748a34c4ed311d128de0"
         }
       ]
     }

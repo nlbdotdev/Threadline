@@ -19,3 +19,8 @@ upstream GCAT annotations.
 
 Svelte and the other dependencies retain their own licenses. The original
 portfolio is the design reference; see docs/design.md.
+
+Git example: metadata from https://github.com/sveltejs/svelte, MIT licensed,
+© 2016–2025 Svelte Contributors. Upstream copyright and license text are included
+in public/data/svelte-LICENSE.txt. Changed-path grouping and change-type labels
+are Threadline's interpretation. No affiliation or endorsement is implied.

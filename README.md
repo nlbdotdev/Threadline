@@ -64,8 +64,8 @@ before/after comparison and the proposed opt-in TanStack renderer.
 ## Second experiment: Git history
 
 Open **Git history** in the Lab, or visit `http://127.0.0.1:4315/?example=git`.
-The example uses real Threadline commits from a fixed first-parent slice,
-with unified, area, project, and commit/merge views. Hashes, exact UTC committer
+The example uses 80 public commits from [Svelte](https://github.com/sveltejs/svelte),
+with timeline, area, subsystem, and change-type views. Hashes, exact UTC committer
 times, parent links, diff counts, and a bounded path preview remain inspectable.
 Rails show touched categories; parent hashes carry Git ancestry.
 

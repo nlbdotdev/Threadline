@@ -14,7 +14,7 @@ This experiment reimplements the behavior with a neutral document model. It does
 not import the portfolio repository, personal entries, imagery, fonts or content.
 The fictional studio playground is newly authored sample data.
 
-The Git example reads a bounded first-parent slice of this public Threadline repository.
+The Git example reads a bounded first-parent slice of the public Svelte repository.
 Its custom card snippet demonstrates commit metadata without coupling Git to the
 renderer. Exact UTC instants were added to the date grammar for same-day ordering.
 

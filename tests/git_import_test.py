@@ -10,6 +10,16 @@ adapter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(adapter)
 
 class GitImportTest(unittest.TestCase):
+    def test_public_svelte_areas_and_change_types(self):
+        self.assertEqual(adapter.area('packages/svelte/src/compiler/phases/2-analyze/index.js')[2], 'compiler')
+        self.assertEqual(adapter.area('packages/svelte/src/internal/client/reactivity/batch.js')[:3], ('runtime/client', 'Client', 'runtime'))
+        self.assertEqual(adapter.area('packages/svelte/tests/runtime-runes/samples/example/main.svelte')[2], 'tests')
+        self.assertEqual(adapter.area('documentation/docs/intro.md')[2], 'docs')
+        self.assertEqual(adapter.area('.changeset/fix.md')[2], 'releases')
+        self.assertEqual(adapter.change_kind('fix(compiler): parse an expression'), 'fix')
+        self.assertEqual(adapter.change_kind('Version Packages (#123)'), 'release')
+        self.assertEqual(adapter.change_kind('Merge branch main'), 'other')
+
     def test_first_parent_merges_binary_and_exact_time(self):
         with tempfile.TemporaryDirectory(prefix='threadline-git-') as folder:
             repo = Path(folder)

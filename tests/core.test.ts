@@ -133,24 +133,26 @@ test('public commit snapshot carries full hashes, exact times and touched areas'
   const doc = parseDocument(JSON.parse(readFileSync('public/data/git-history.json', 'utf8')));
   const manifest = JSON.parse(readFileSync('public/data/git-provenance.json', 'utf8'));
   assert.equal(doc.events.length, manifest.commitCount);
-  assert.ok(doc.events.length > 0 && doc.events.length <= manifest.limit);
+  assert.ok(doc.events.length === 80 && doc.events.length <= manifest.limit);
   assert.equal(doc.events[0].id, manifest.revision);
   assert.ok(doc.events.every((event) => /^[0-9a-f]{40}$/.test(event.id)));
   assert.ok(doc.events.every((event) => event.date.start?.endsWith('Z')));
   assert.ok(
     doc.events.some(
-      (event) => Array.isArray(event.attributes.area) && event.attributes.area.length >= 1,
+      (event) => Array.isArray(event.attributes.area) && event.attributes.area.length > 1,
     ),
   );
-  assert.ok(doc.events.every((event) => event.attributes.repository === 'Threadline'));
+  assert.ok(doc.events.every((event) => event.attributes.repository === 'svelte'));
   assert.ok(
     doc.events.every((event) =>
       event.sources?.every((source) =>
-        source.url.startsWith('https://github.com/nlbdotdev/Threadline/commit/'),
+        source.url.startsWith('https://github.com/sveltejs/svelte/commit/'),
       ),
     ),
   );
   assert.equal(selectEvents(doc, doc.views[0], { order: 'desc' })[0].id, manifest.revision);
+  assert.ok(new Set(doc.events.map((event) => event.attributes.kind)).size >= 4);
+  assert.ok(doc.dimensions[0].values.filter((value) => !value.parent).length >= 5);
   const areas = doc.views.find((view) => view.id === 'areas')!;
   assert.ok(railsFor(doc, areas).every((rail) => rail.id.startsWith('group:')));
 });
