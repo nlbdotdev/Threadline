@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "id": "git-history",
+  "title": "Threadline commit history",
+  "description": "1 commits on the first-parent path ending at 66c67a59. Ordered by committer timestamp, with merge diffs against the first parent.",
+  "dimensions": [
+    {
+      "id": "area",
+      "label": "Touched area",
+      "values": [
+        {
+          "id": "group:repository",
+          "label": "Repository",
+          "color": "#476e5e"
+        },
+        {
+          "id": "area:maintenance",
+          "label": "Repository maintenance",
+          "parent": "group:repository",
+          "color": "#476e5e"
+        }
+      ]
+    },
+    {
+      "id": "change",
+      "label": "Commit type",
+      "values": [
+        {
+          "id": "commit",
+          "label": "Commit",
+          "color": "#476e5e"
+        },
+        {
+          "id": "merge",
+          "label": "Merge",
+          "color": "#b97345"
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "thread",
+      "label": "One thread",
+      "mode": "unified",
+      "dimension": "area",
+      "depth": "parent"
+    },
+    {
+      "id": "areas",
+      "label": "Areas",
+      "mode": "split",
+      "dimension": "area",
+      "depth": "parent"
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "mode": "split",
+      "dimension": "area",
+      "depth": "leaf"
+    },
+    {
+      "id": "merges",
+      "label": "Commit / merge",
+      "mode": "split",
+      "dimension": "change"
+    }
+  ],
+  "events": [
+    {
+      "id": "66c67a594793f3120f83357f6dbe68b5bc8e494e",
+      "title": "Extract Threadline component, demo and docs into a standalone project",
+      "date": {
+        "start": "2026-10-22T01:53:16Z"
+      },
+      "summary": "42 files changed \u00b7 +6,682 / \u22120",
+      "attributes": {
+        "area": [
+          "area:maintenance"
+        ],
+        "change": "commit",
+        "sha": "66c67a594793f3120f83357f6dbe68b5bc8e494e",
+        "parents": [],
+        "sourceCommitterTime": "2026-10-21T21:53:16-04:00",
+        "filesChanged": "42",
+        "additions": "6682",
+        "deletions": "0",
+        "binaryFiles": "0",
+        "pathPreview": [
+          ".gitignore",
+          ".prettierignore",
+          ".prettierrc.json",
+          "AGENTS.md",
+          "NOTICE.md",
+          "README.md",
+          "docs/component.md",
+          "docs/data.md"
+        ],
+        "repository": "Threadline"
+      },
+      "tags": [
+        "Repository maintenance"
+      ],
+      "sources": [
+        {
+          "label": "View commit",
+          "url": "https://github.com/nlbdotdev/Threadline/commit/66c67a594793f3120f83357f6dbe68b5bc8e494e"
+        }
+      ]
+    }
+  ]
+}

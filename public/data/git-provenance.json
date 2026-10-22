@@ -1,0 +1,12 @@
+{
+  "repository": "Threadline",
+  "repositoryUrl": "https://github.com/nlbdotdev/Threadline",
+  "revision": "66c67a594793f3120f83357f6dbe68b5bc8e494e",
+  "selection": "first-parent",
+  "limit": 12,
+  "commitCount": 1,
+  "capturedAt": "2026-10-22T01:53:16.404143+00:00",
+  "ordering": "UTC committer timestamp",
+  "mergeDiff": "first parent",
+  "pathPreviewLimit": 8
+}

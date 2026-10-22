@@ -453,8 +453,8 @@ npm run build</code
             </article>{/each}
         </div>
         <p>
-          The Lab is local-only. The package has not been published. No React or Vue adapter is
-          shipped yet.
+          The Lab is publicly hosted. The npm package has not been published. No React or Vue
+          adapter is shipped yet.
         </p>
       </section>
     {/if}
